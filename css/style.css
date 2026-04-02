@@ -377,7 +377,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .section-nav {
-    top: 68px;
+    top: 60px;
     padding: 8px 0;
   }
   .section-nav__inner {
@@ -790,6 +790,20 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .header--scrolled {
+    padding: 0;
+    height: 60px;
+  }
+  .logo__svg {
+    width: 34px;
+    height: 34px;
+  }
   .hamburger {
     display: flex;
   }
