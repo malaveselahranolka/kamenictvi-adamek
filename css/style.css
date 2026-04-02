@@ -376,12 +376,19 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .section-nav {
+    top: 68px;
+    padding: 8px 0;
+  }
   .section-nav__inner {
-    gap: 6px;
+    gap: 5px;
   }
   .section-nav__link {
-    font-size: 0.8rem;
-    padding: 6px 14px;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  html {
+    scroll-padding-top: 100px;
   }
 }
 
