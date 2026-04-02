@@ -101,4 +101,32 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('animate-target');
     observer.observe(el);
   });
+
+  // --- Scroll-spy for section nav ---
+  const sectionNavLinks = document.querySelectorAll('.section-nav__link[data-section]');
+  if (sectionNavLinks.length > 0) {
+    const sections = [];
+    sectionNavLinks.forEach(link => {
+      const id = link.getAttribute('data-section');
+      const section = document.getElementById(id);
+      if (section) sections.push({ id, el: section, link });
+    });
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 160;
+      let current = sections[0];
+
+      for (const s of sections) {
+        if (s.el.offsetTop <= scrollY) {
+          current = s;
+        }
+      }
+
+      sectionNavLinks.forEach(l => l.classList.remove('section-nav__link--active'));
+      if (current) current.link.classList.add('section-nav__link--active');
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+  }
 });

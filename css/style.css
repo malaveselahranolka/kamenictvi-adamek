@@ -368,7 +368,8 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-.section-nav__link:hover {
+.section-nav__link:hover,
+.section-nav__link--active {
   color: var(--color-accent);
   border-color: var(--color-accent);
   background: rgba(201,169,110,0.06);
