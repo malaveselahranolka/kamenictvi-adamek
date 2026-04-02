@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Reklamní plakát — Kamenictví Adámek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
+      font-family: 'Inter', sans-serif;
+    }
+    h2 { font-family: 'Playfair Display', serif; color: #fff; margin-bottom: 20px; }
+
+    /* A3 poměr 297x420mm ~ ~0.707 poměr stran */
+    .poster {
+      width: 700px;
+      height: 990px;
+      background: linear-gradient(170deg, #0e0e0e 0%, #1a1816 40%, #0e0e0e 100%);
+      border-radius: 4px;
+      box-shadow: 0 16px 64px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Horní dekorativní pruh */
+    .poster__accent-top {
+      height: 6px;
+      background: linear-gradient(90deg, #c9a96e, #a08040, #c9a96e);
+      flex-shrink: 0;
+    }
+
+    /* Hlavní obsah */
+    .poster__header {
+      padding: 48px 56px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .poster__header svg {
+      width: 64px; height: 64px;
+      flex-shrink: 0;
+    }
+
+    .poster__header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .poster__company {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .poster__sub {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #c9a96e;
+    }
+
+    .poster__divider {
+      margin: 0 56px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent);
+    }
+
+    /* Hero oblast s fotkami */
+    .poster__hero {
+      padding: 32px 56px;
+      flex-shrink: 0;
+    }
+
+    .poster__tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .poster__tagline span {
+      color: #c9a96e;
+    }
+
+    .poster__subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* Galerie fotek */
+    .poster__gallery {
+      padding: 16px 56px 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .poster__photo {
+      aspect-ratio: 4/3;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(201,169,110,0.15);
+    }
+
+    .poster__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Služby */
+    .poster__services {
+      padding: 20px 56px;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .poster__service {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+    }
+
+    .poster__service::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #c9a96e;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Spodní kontaktní panel */
+    .poster__footer {
+      margin-top: auto;
+      background: rgba(201,169,110,0.08);
+      border-top: 1px solid rgba(201,169,110,0.15);
+      padding: 28px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .poster__footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .poster__footer-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #c9a96e;
+      margin-bottom: 4px;
+    }
+
+    .poster__contact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+    }
+
+    .poster__contact svg {
+      width: 16px; height: 16px;
+      color: #c9a96e;
+      flex-shrink: 0;
+    }
+
+    .poster__footer-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .poster__hours {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .poster__hours-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #c9a96e;
+      margin-bottom: 4px;
+    }
+
+    .poster__web {
+      font-size: 16px;
+      color: #c9a96e;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Spodní akcentový pruh */
+    .poster__accent-bottom {
+      height: 6px;
+      background: linear-gradient(90deg, #c9a96e, #a08040, #c9a96e);
+      flex-shrink: 0;
+    }
+
+    .print-note {
+      color: #aaa;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Reklamní plakát — A3</h2>
+
+  <div class="poster">
+    <div class="poster__accent-top"></div>
+
+    <div class="poster__header">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M24 4v44M6 16l18 12 18-12" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M6 32l18-12 18 12" stroke="#c9a96e" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+        <path d="M18 30l6-16 6 16M19.5 26h9" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="poster__header-text">
+        <div class="poster__company">Kamenictví Adámek</div>
+        <div class="poster__sub">Kamenické služby</div>
+      </div>
+    </div>
+
+    <div class="poster__divider"></div>
+
+    <div class="poster__hero">
+      <div class="poster__tagline">Kámen, který vydrží<br><span>po generace</span></div>
+      <p class="poster__subtitle">Rodinná firma s dlouholetou tradicí v oboru kamenických služeb. Kompletní výroba a montáž z více než 80 druhů žul a mramorů z celého světa.</p>
+    </div>
+
+    <div class="poster__gallery">
+      <div class="poster__photo"><img src="img/pomniky/IMG_1033.JPEG" alt="Pomník"></div>
+      <div class="poster__photo"><img src="img/pomniky/IMG_1060.JPEG" alt="Pomník"></div>
+      <div class="poster__photo"><img src="img/pomniky/IMG_1064.JPEG" alt="Pomník"></div>
+      <div class="poster__photo"><img src="img/pomniky/IMG_1034.JPEG" alt="Pomník"></div>
+      <div class="poster__photo"><img src="img/pomniky/IMG_1045.JPEG" alt="Pomník"></div>
+      <div class="poster__photo"><img src="img/pomniky/IMG_1042.JPEG" alt="Pomník"></div>
+    </div>
+
+    <div class="poster__services">
+      <div class="poster__service">Pomníky a náhrobky</div>
+      <div class="poster__service">Schody a dlažby</div>
+      <div class="poster__service">Krby a sloupy</div>
+      <div class="poster__service">Kuchyňské desky</div>
+      <div class="poster__service">Bytové doplňky</div>
+    </div>
+
+    <div class="poster__footer">
+      <div class="poster__footer-left">
+        <div class="poster__footer-label">Kontakt</div>
+        <div class="poster__contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Sokolská 595, 790 84 Mikulovice
+        </div>
+        <div class="poster__contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013.09 5.18 2 2 0 015.11 3h3a2 2 0 012 1.72c.13.81.36 1.6.68 2.34a2 2 0 01-.45 2.11L8.09 11.5a16 16 0 006.41 6.41l2.33-2.33a2 2 0 012.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0122 16.92z"/></svg>
+          +420 602 277 869
+        </div>
+        <div class="poster__contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+          info@kamenictvi-adamek.cz
+        </div>
+      </div>
+      <div class="poster__footer-right">
+        <div class="poster__hours-label">Provozní doba</div>
+        <div class="poster__hours">Po — Ne: 8:00 — 20:00</div>
+        <div class="poster__web">www.kamenictvi-adamek.cz</div>
+      </div>
+    </div>
+
+    <div class="poster__accent-bottom"></div>
+  </div>
+
+  <p class="print-note">Formát A3 (297 × 420 mm) — pro tisk: Ctrl+P → Uložit jako PDF, nastavit A3</p>
+
+</body>
+</html>

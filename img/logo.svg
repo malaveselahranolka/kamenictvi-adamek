@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Chisel / stone block mark -->
+  <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M24 4v44M6 16l18 12 18-12" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M6 32l18-12 18 12" fill="none" stroke="#c9a96e" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+  <!-- A letter stylized -->
+  <path d="M18 30l6-16 6 16M19.5 26h9" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

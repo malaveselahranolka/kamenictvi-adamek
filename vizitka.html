@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Vizitka — Kamenictví Adámek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #e8e4de; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 60px; font-family: 'Inter', sans-serif; padding: 40px; }
+    h2 { font-family: 'Playfair Display', serif; color: #333; margin-bottom: 20px; }
+
+    /* Vizitka 90x50mm při 96dpi ~ 340x189px, zvětšeno 2x pro ostrost */
+    .card {
+      width: 680px;
+      height: 378px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    /* === PŘEDNÍ STRANA === */
+    .card-front {
+      background: linear-gradient(145deg, #0e0e0e 0%, #1a1816 60%, #0e0e0e 100%);
+      display: flex;
+      align-items: center;
+      padding: 40px 48px;
+      gap: 36px;
+    }
+
+    .card-front::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 220px; height: 100%;
+      background: linear-gradient(135deg, transparent 40%, rgba(201,169,110,0.04) 100%);
+    }
+
+    .card-front .logo-area {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-front .logo-area svg {
+      width: 72px; height: 72px;
+    }
+
+    .card-front .divider {
+      width: 1px;
+      height: 200px;
+      background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.4), transparent);
+      flex-shrink: 0;
+    }
+
+    .card-front .info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-front .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    .card-front .company-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #c9a96e;
+      margin-bottom: 12px;
+    }
+
+    .card-front .contact-line {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.6;
+    }
+
+    .card-front .contact-line svg {
+      width: 14px; height: 14px;
+      color: #c9a96e;
+      flex-shrink: 0;
+    }
+
+    .card-front .accent-line {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #c9a96e, #a08040, #c9a96e);
+    }
+
+    /* === ZADNÍ STRANA === */
+    .card-back {
+      background: linear-gradient(145deg, #0e0e0e 0%, #1a1816 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .card-back svg {
+      width: 100px; height: 100px;
+    }
+
+    .card-back .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card-back .company-sub {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #c9a96e;
+    }
+
+    .card-back .tagline {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .card-back .accent-line {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #c9a96e, #a08040, #c9a96e);
+    }
+
+    .card-back .corner-ornament {
+      position: absolute;
+      width: 60px; height: 60px;
+      border-color: rgba(201,169,110,0.15);
+      border-style: solid;
+    }
+    .card-back .corner-ornament.tl { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+    .card-back .corner-ornament.tr { top: 20px; right: 20px; border-width: 1px 1px 0 0; }
+    .card-back .corner-ornament.bl { bottom: 20px; left: 20px; border-width: 0 0 1px 1px; }
+    .card-back .corner-ornament.br { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
+
+    .print-note {
+      color: #999;
+      font-size: 12px;
+      margin-top: -20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>Vizitka — přední strana</h2>
+    <div class="card card-front">
+      <div class="logo-area">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 4v44M6 16l18 12 18-12" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M6 32l18-12 18 12" stroke="#c9a96e" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+          <path d="M18 30l6-16 6 16M19.5 26h9" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="divider"></div>
+      <div class="info">
+        <div class="company-name">Kamenictví Adámek</div>
+        <div class="company-sub">Kamenické služby</div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Sokolská 595, 790 84 Mikulovice
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013.09 5.18 2 2 0 015.11 3h3a2 2 0 012 1.72c.13.81.36 1.6.68 2.34a2 2 0 01-.45 2.11L8.09 11.5a16 16 0 006.41 6.41l2.33-2.33a2 2 0 012.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0122 16.92z"/></svg>
+          +420 602 277 869
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+          info@kamenictvi-adamek.cz
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          www.kamenictvi-adamek.cz
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <div>
+    <h2>Vizitka — zadní strana</h2>
+    <div class="card card-back">
+      <div class="accent-line"></div>
+      <div class="corner-ornament tl"></div>
+      <div class="corner-ornament tr"></div>
+      <div class="corner-ornament bl"></div>
+      <div class="corner-ornament br"></div>
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M24 4v44M6 16l18 12 18-12" stroke="#c9a96e" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M6 32l18-12 18 12" stroke="#c9a96e" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+        <path d="M18 30l6-16 6 16M19.5 26h9" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="company-name">Kamenictví Adámek</div>
+      <div class="company-sub">Kamenické služby</div>
+      <div class="tagline">Kámen, který vydrží po generace</div>
+    </div>
+  </div>
+
+  <p class="print-note">Rozměr vizitky: 90 × 50 mm — pro tisk otevřete v prohlížeči a uložte jako PDF (Ctrl+P → Uložit jako PDF)</p>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceník — Kamenictví Adámek</title>
+  <meta name="description" content="Ceník kamenických služeb — Kamenictví Adámek, Mikulovice.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigace -->
+  <header class="header header--scrolled" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <svg class="logo__svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 4v44M6 16l18 12 18-12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M6 32l18-12 18 12" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+          <path d="M18 30l6-16 6 16M19.5 26h9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo__text">
+          <span class="logo__name">Kamenictví Adámek</span>
+          <span class="logo__sub">kamenické služby</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Úvod</a>
+        <a href="reference.html" class="nav__link">Reference</a>
+        <a href="cenik.html" class="nav__link nav__link--active">Ceník</a>
+        <a href="kontakt.html" class="nav__link">Kontakt</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">Ceny</span>
+      <h1>Ceník služeb</h1>
+      <p>Orientační ceník našich nejčastějších služeb. Přesnou cenu vždy stanovíme individuálně.</p>
+    </div>
+  </section>
+
+  <!-- Ceník -->
+  <section class="pricing">
+    <div class="container">
+
+      <div class="pricing__note">
+        <p>Ceny jsou orientační a závisí na zvoleném materiálu, rozměrech a náročnosti zpracování. Pro přesnou cenovou nabídku nás prosím <a href="kontakt.html">kontaktujte</a> — kalkulace je zdarma a nezávazná.</p>
+      </div>
+
+      <table class="pricing__table">
+        <thead>
+          <tr>
+            <th>Služba</th>
+            <th>Orientační cena</th>
+            <th>Poznámka</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pomník — jednoduchý</td>
+            <td>od 25 000 Kč</td>
+            <td>Včetně nápisu, bez montáže</td>
+          </tr>
+          <tr>
+            <td>Pomník — dvojhrob</td>
+            <td>od 45 000 Kč</td>
+            <td>Včetně nápisu, bez montáže</td>
+          </tr>
+          <tr>
+            <td>Kuchyňská deska</td>
+            <td>od 8 000 Kč/m²</td>
+            <td>Dle materiálu, vč. zaměření</td>
+          </tr>
+          <tr>
+            <td>Koupelnová deska</td>
+            <td>od 6 500 Kč/m²</td>
+            <td>Dle materiálu</td>
+          </tr>
+          <tr>
+            <td>Obklad krbu</td>
+            <td>od 15 000 Kč</td>
+            <td>Dle rozměrů a materiálu</td>
+          </tr>
+          <tr>
+            <td>Schody — obklad</td>
+            <td>od 3 500 Kč/stupeň</td>
+            <td>Včetně zaměření</td>
+          </tr>
+          <tr>
+            <td>Dlažba z přírodního kamene</td>
+            <td>od 2 500 Kč/m²</td>
+            <td>Materiál + pokládka</td>
+          </tr>
+          <tr>
+            <td>Parapety</td>
+            <td>od 2 000 Kč/bm</td>
+            <td>Dle šířky a materiálu</td>
+          </tr>
+          <tr>
+            <td>Zaměření a konzultace</td>
+            <td>Zdarma</td>
+            <td>V rámci objednávky</td>
+          </tr>
+          <tr>
+            <td>Doprava a montáž</td>
+            <td>Dle vzdálenosti</td>
+            <td>Individuální kalkulace</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container text-center">
+      <h2 class="cta__title">Chcete přesnou cenovou nabídku?</h2>
+      <p class="cta__text">Zavolejte nám nebo napište — kalkulaci připravíme zdarma a nezávazně.</p>
+      <div class="hero__buttons">
+        <a href="tel:+420602277869" class="btn btn--primary">Zavolejte nám</a>
+        <a href="kontakt.html" class="btn btn--outline">Napište nám</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patička -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="index.html" class="logo logo--footer">
+          <svg class="logo__svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M24 4v44M6 16l18 12 18-12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M6 32l18-12 18 12" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" opacity="0.3"/>
+            <path d="M18 30l6-16 6 16M19.5 26h9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo__text">
+            <span class="logo__name">Kamenictví Adámek</span>
+            <span class="logo__sub">kamenické služby</span>
+          </div>
+        </a>
+        <p class="footer__desc">Rodinná firma s tradicí v oboru kamenických služeb. Kvalita, spolehlivost a férovost.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigace</h4>
+        <a href="index.html">Úvod</a>
+        <a href="reference.html">Reference</a>
+        <a href="cenik.html">Ceník</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <p>Sokolská 595<br>790 84 Mikulovice</p>
+        <p><a href="tel:+420602277869">602 277 869</a></p>
+        <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Kamenictví Adámek. Všechna práva vyhrazena. <span class="footer__credit">Webdesign Filip Adámek</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
