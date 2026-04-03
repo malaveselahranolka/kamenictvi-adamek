@@ -341,12 +341,20 @@ a:hover {
 
 /* --- Section Nav (prolink) --- */
 .section-nav {
-  background: var(--color-bg-light);
-  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, rgba(20, 18, 14, 0.98) 0%, rgba(30, 25, 16, 0.98) 50%, rgba(20, 18, 14, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
   padding: 10px 0;
-  position: sticky;
-  top: 68px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+.section-nav--visible {
+  transform: translateY(0);
 }
 
 .section-nav__inner {
@@ -377,7 +385,6 @@ a:hover {
 
 @media (max-width: 768px) {
   .section-nav {
-    top: 60px;
     padding: 8px 0;
   }
   .section-nav__inner {
@@ -386,9 +393,6 @@ a:hover {
   .section-nav__link {
     font-size: 0.75rem;
     padding: 5px 12px;
-  }
-  html {
-    scroll-padding-top: 100px;
   }
 }
 
@@ -790,20 +794,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  .header--scrolled {
-    padding: 0;
-    height: 60px;
-  }
-  .logo__svg {
-    width: 34px;
-    height: 34px;
-  }
   .hamburger {
     display: flex;
   }

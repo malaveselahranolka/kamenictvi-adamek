@@ -102,6 +102,49 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // --- Section nav: fixed positioning glued to header ---
+  const sectionNav = document.getElementById('section-nav') || document.querySelector('.section-nav');
+  if (sectionNav) {
+    const sectionNavPlaceholder = document.createElement('div');
+    sectionNav.parentNode.insertBefore(sectionNavPlaceholder, sectionNav.nextSibling);
+
+    function positionSectionNav() {
+      const headerH = header ? header.offsetHeight : 0;
+      sectionNav.style.top = headerH + 'px';
+      sectionNavPlaceholder.style.height = sectionNav.offsetHeight + 'px';
+
+      // Show nav once page has scrolled past its original position
+      const placeholderTop = sectionNavPlaceholder.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY + headerH >= placeholderTop - sectionNav.offsetHeight) {
+        sectionNav.classList.add('section-nav--visible');
+      } else {
+        sectionNav.classList.remove('section-nav--visible');
+      }
+    }
+
+    function updateScrollPadding() {
+      const total = (header ? header.offsetHeight : 0) + sectionNav.offsetHeight + 10;
+      document.documentElement.style.scrollPaddingTop = total + 'px';
+    }
+
+    // On reference page, nav is always visible
+    if (header && header.classList.contains('header--scrolled')) {
+      sectionNav.classList.add('section-nav--visible');
+      function posRefNav() {
+        sectionNav.style.top = header.offsetHeight + 'px';
+        sectionNavPlaceholder.style.height = sectionNav.offsetHeight + 'px';
+        updateScrollPadding();
+      }
+      posRefNav();
+      window.addEventListener('resize', posRefNav);
+    } else {
+      window.addEventListener('scroll', () => { positionSectionNav(); updateScrollPadding(); }, { passive: true });
+      window.addEventListener('resize', () => { positionSectionNav(); updateScrollPadding(); });
+      positionSectionNav();
+      updateScrollPadding();
+    }
+  }
+
   // --- Scroll-spy for section nav ---
   const sectionNavLinks = document.querySelectorAll('.section-nav__link[data-section]');
   if (sectionNavLinks.length > 0) {
@@ -113,7 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateActiveNav() {
-      const scrollY = window.scrollY + 160;
+      const headerH = header ? header.offsetHeight : 0;
+      const navH = sectionNav ? sectionNav.offsetHeight : 0;
+      const scrollY = window.scrollY + headerH + navH + 20;
       let current = sections[0];
 
       for (const s of sections) {
