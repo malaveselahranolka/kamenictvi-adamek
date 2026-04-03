@@ -102,47 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- Section nav: fixed positioning glued to header ---
+  // --- Section nav: sticky, synced to header height via CSS variable ---
   const sectionNav = document.getElementById('section-nav') || document.querySelector('.section-nav');
-  if (sectionNav) {
-    const sectionNavPlaceholder = document.createElement('div');
-    sectionNav.parentNode.insertBefore(sectionNavPlaceholder, sectionNav.nextSibling);
-
-    function positionSectionNav() {
-      const headerH = header ? header.offsetHeight : 0;
-      sectionNav.style.top = headerH + 'px';
-      sectionNavPlaceholder.style.height = sectionNav.offsetHeight + 'px';
-
-      // Show nav once page has scrolled past its original position
-      const placeholderTop = sectionNavPlaceholder.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY + headerH >= placeholderTop - sectionNav.offsetHeight) {
-        sectionNav.classList.add('section-nav--visible');
-      } else {
-        sectionNav.classList.remove('section-nav--visible');
-      }
+  if (sectionNav && header) {
+    function syncHeaderHeight() {
+      const h = header.offsetHeight;
+      document.documentElement.style.setProperty('--header-height', h + 'px');
+      document.documentElement.style.scrollPaddingTop = (h + sectionNav.offsetHeight + 10) + 'px';
     }
-
-    function updateScrollPadding() {
-      const total = (header ? header.offsetHeight : 0) + sectionNav.offsetHeight + 10;
-      document.documentElement.style.scrollPaddingTop = total + 'px';
-    }
-
-    // On reference page, nav is always visible
-    if (header && header.classList.contains('header--scrolled')) {
-      sectionNav.classList.add('section-nav--visible');
-      function posRefNav() {
-        sectionNav.style.top = header.offsetHeight + 'px';
-        sectionNavPlaceholder.style.height = sectionNav.offsetHeight + 'px';
-        updateScrollPadding();
-      }
-      posRefNav();
-      window.addEventListener('resize', posRefNav);
-    } else {
-      window.addEventListener('scroll', () => { positionSectionNav(); updateScrollPadding(); }, { passive: true });
-      window.addEventListener('resize', () => { positionSectionNav(); updateScrollPadding(); });
-      positionSectionNav();
-      updateScrollPadding();
-    }
+    syncHeaderHeight();
+    window.addEventListener('scroll', syncHeaderHeight, { passive: true });
+    window.addEventListener('resize', syncHeaderHeight);
   }
 
   // --- Scroll-spy for section nav ---
@@ -156,9 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateActiveNav() {
-      const headerH = header ? header.offsetHeight : 0;
-      const navH = sectionNav ? sectionNav.offsetHeight : 0;
-      const scrollY = window.scrollY + headerH + navH + 20;
+      const scrollY = window.scrollY + 160;
       let current = sections[0];
 
       for (const s of sections) {
