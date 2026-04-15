@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /plakat.html
+Disallow: /vizitka.html
+
+Sitemap: https://kamenictvi-adamek.cz/sitemap.xml
