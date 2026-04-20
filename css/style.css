@@ -1087,6 +1087,22 @@ a:hover {
   font-weight: 500;
 }
 
+.pricing__section-header td {
+  background: rgba(201, 169, 110, 0.08) !important;
+  color: var(--color-accent) !important;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 20px !important;
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.pricing__section-header:hover td {
+  background: rgba(201, 169, 110, 0.08) !important;
+}
+
 @media (max-width: 768px) {
   .pricing__table {
     font-size: 0.85rem;
