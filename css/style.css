@@ -177,7 +177,8 @@ a:hover {
 }
 
 .header--with-nav .section-nav {
-  display: block;
+  max-height: 200px;
+  opacity: 1;
 }
 
 .header__inner {
@@ -330,7 +331,10 @@ a:hover {
   backdrop-filter: blur(20px);
   border-top: 1px solid rgba(201, 169, 110, 0.12);
   padding: 10px 0;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
 }
 
 .section-nav__inner {
