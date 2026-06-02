@@ -842,7 +842,7 @@ a:hover {
 
 /* --- Page header for subpages --- */
 .page-header {
-  padding: 140px 0 60px;
+  padding: 180px 0 60px;
   background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
   border-bottom: 1px solid var(--color-border);
 }
