@@ -106,12 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- scroll-margin-top na cílových sekcích = přesný anchor scroll ---
+  // --- scroll-margin-top přesně na cílových elementech z navbaru ---
   if (header) {
     function updateScrollMargins() {
-      const margin = header.offsetHeight + 8 + 'px';
-      document.querySelectorAll('section[id], .gallery__section[id]').forEach(el => {
-        el.style.scrollMarginTop = margin;
+      const margin = header.offsetHeight + 16 + 'px';
+      document.querySelectorAll('.section-nav a[href^="#"]').forEach(link => {
+        const target = document.getElementById(link.getAttribute('href').slice(1));
+        if (target) target.style.scrollMarginTop = margin;
       });
     }
     updateScrollMargins();
