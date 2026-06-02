@@ -113,6 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
     syncHeaderHeight();
     window.addEventListener('scroll', syncHeaderHeight, { passive: true });
     window.addEventListener('resize', syncHeaderHeight);
+    // Re-sync after logo transition finishes (prevents gap during shrink animation)
+    header.addEventListener('transitionend', syncHeaderHeight);
   }
 
   // --- Scroll-spy for section nav ---
