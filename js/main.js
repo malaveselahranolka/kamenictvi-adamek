@@ -23,16 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Header scroll effect (only on homepage) ---
+  // --- Header scroll effect ---
   const header = document.getElementById('header');
+  const hero = document.getElementById('hero');
   if (header && !header.classList.contains('header--scrolled')) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('header--scrolled');
-      } else {
-        header.classList.remove('header--scrolled');
+      const scrolled = window.scrollY > 50;
+      header.classList.toggle('header--scrolled', scrolled);
+
+      // Show section-nav when hero has scrolled out of view
+      if (hero) {
+        const heroPast = hero.getBoundingClientRect().bottom <= header.offsetHeight;
+        header.classList.toggle('header--with-nav', heroPast);
       }
-    });
+    }, { passive: true });
   }
 
   // --- Lightbox ---
@@ -102,18 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- Section nav: sticky, synced to header height via CSS variable ---
+  // --- Section nav scroll-padding (section-nav je uvnitř headeru) ---
   const sectionNav = document.getElementById('section-nav') || document.querySelector('.section-nav');
-  if (sectionNav && header) {
-    function syncHeaderHeight() {
-      const h = header.offsetHeight;
-      document.documentElement.style.setProperty('--header-height', h + 'px');
-      document.documentElement.style.scrollPaddingTop = (h + sectionNav.offsetHeight + 10) + 'px';
+  if (header) {
+    function updateScrollPadding() {
+      document.documentElement.style.scrollPaddingTop = header.offsetHeight + 10 + 'px';
     }
-
-    syncHeaderHeight();
-    // ResizeObserver fires on every frame the header changes size (incl. during CSS transitions)
-    new ResizeObserver(syncHeaderHeight).observe(header);
+    updateScrollPadding();
+    window.addEventListener('scroll', updateScrollPadding, { passive: true });
   }
 
   // --- Scroll-spy for section nav ---

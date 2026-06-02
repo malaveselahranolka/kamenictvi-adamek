@@ -176,6 +176,10 @@ a:hover {
   border-bottom: 1px solid var(--color-border);
 }
 
+.header--with-nav .section-nav {
+  display: block;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -322,13 +326,11 @@ a:hover {
 
 /* --- Section Nav (prolink) --- */
 .section-nav {
-  background: linear-gradient(135deg, rgba(20, 18, 14, 0.98) 0%, rgba(30, 25, 16, 0.98) 50%, rgba(20, 18, 14, 0.98) 100%);
+  background: rgba(14, 13, 11, 0.98);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
   padding: 10px 0;
-  position: sticky;
-  top: var(--header-height, 68px);
-  z-index: 99;
+  display: none;
 }
 
 .section-nav__inner {
