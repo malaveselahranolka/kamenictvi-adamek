@@ -193,7 +193,11 @@ a:hover {
   width: 160px;
   height: auto;
   display: block;
-  transition: opacity var(--transition), filter var(--transition);
+  transition: opacity var(--transition), filter var(--transition), width var(--transition);
+}
+
+.header--scrolled .logo__img {
+  width: 110px;
 }
 
 .logo:hover .logo__img {
