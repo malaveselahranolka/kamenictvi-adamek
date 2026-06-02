@@ -244,7 +244,7 @@ a:hover {
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 1001;
+  z-index: 1003;
 }
 
 .hamburger span {
@@ -787,6 +787,7 @@ a:hover {
     gap: 4px;
     transition: right var(--transition);
     border-left: 1px solid var(--color-border);
+    z-index: 1002;
   }
 
   .nav.active {

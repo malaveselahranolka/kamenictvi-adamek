@@ -106,14 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- Section nav scroll-padding (section-nav je uvnitř headeru) ---
-  const sectionNav = document.getElementById('section-nav') || document.querySelector('.section-nav');
+  // --- Scroll-padding: aktualizovat při každé změně výšky headeru ---
   if (header) {
     function updateScrollPadding() {
       document.documentElement.style.scrollPaddingTop = header.offsetHeight + 10 + 'px';
     }
     updateScrollPadding();
     window.addEventListener('scroll', updateScrollPadding, { passive: true });
+    // ResizeObserver zachytí rozbalení/sbalení section-navu (0.35s animace)
+    if (window.ResizeObserver) new ResizeObserver(updateScrollPadding).observe(header);
   }
 
   // --- Scroll-spy for section nav ---
