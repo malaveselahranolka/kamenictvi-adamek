@@ -110,11 +110,22 @@ document.addEventListener('DOMContentLoaded', () => {
       document.documentElement.style.setProperty('--header-height', h + 'px');
       document.documentElement.style.scrollPaddingTop = (h + sectionNav.offsetHeight + 10) + 'px';
     }
+
+    // Poll every frame for ~400ms so --header-height tracks the transition in real time
+    let rafId;
+    function startSyncLoop() {
+      cancelAnimationFrame(rafId);
+      const end = performance.now() + 400;
+      function tick(now) {
+        syncHeaderHeight();
+        if (now < end) rafId = requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
     syncHeaderHeight();
-    window.addEventListener('scroll', syncHeaderHeight, { passive: true });
+    window.addEventListener('scroll', startSyncLoop, { passive: true });
     window.addEventListener('resize', syncHeaderHeight);
-    // Re-sync after logo transition finishes (prevents gap during shrink animation)
-    header.addEventListener('transitionend', syncHeaderHeight);
   }
 
   // --- Scroll-spy for section nav ---
