@@ -186,46 +186,23 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
 }
 
-/* SVG Logo */
-.logo__svg {
-  width: 42px;
-  height: 42px;
-  color: var(--color-accent);
-  flex-shrink: 0;
-  transition: all var(--transition);
+.logo__img {
+  width: 160px;
+  height: auto;
+  display: block;
+  transition: opacity var(--transition), filter var(--transition);
 }
 
-.logo:hover .logo__svg {
-  color: var(--color-accent-light);
-  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.3));
+.logo:hover .logo__img {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(168, 128, 79, 0.3));
 }
 
-.logo--footer .logo__svg {
-  width: 36px;
-  height: 36px;
-}
-
-.logo__text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo__name {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-white);
-}
-
-.logo__sub {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-text-muted);
+.logo--footer .logo__img {
+  width: 140px;
 }
 
 /* Nav */
@@ -736,9 +713,6 @@ a:hover {
   max-width: 320px;
 }
 
-.logo--footer .logo__name {
-  font-size: 1rem;
-}
 
 .footer__bottom {
   border-top: 1px solid var(--color-border);
