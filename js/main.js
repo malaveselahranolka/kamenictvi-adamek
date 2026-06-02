@@ -117,6 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.ResizeObserver) new ResizeObserver(updateScrollPadding).observe(header);
   }
 
+  // --- Section nav links: přesný scroll s odečtením výšky headeru ---
+  document.querySelectorAll('.section-nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute('href').slice(1));
+      if (!target || !header) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
   // --- Scroll-spy for section nav ---
   const sectionNavLinks = document.querySelectorAll('.section-nav__link[data-section]');
   if (sectionNavLinks.length > 0) {
