@@ -33,7 +33,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
   font-size: 16px;
   scrollbar-color: var(--color-accent-dark) var(--color-bg-light);
   scrollbar-width: thin;
