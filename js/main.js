@@ -106,27 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- Scroll-padding: aktualizovat při každé změně výšky headeru ---
+  // --- scroll-margin-top na cílových sekcích = přesný anchor scroll ---
   if (header) {
-    function updateScrollPadding() {
-      document.documentElement.style.scrollPaddingTop = header.offsetHeight + 10 + 'px';
+    function updateScrollMargins() {
+      const margin = header.offsetHeight + 8 + 'px';
+      document.querySelectorAll('section[id], .gallery__section[id]').forEach(el => {
+        el.style.scrollMarginTop = margin;
+      });
     }
-    updateScrollPadding();
-    window.addEventListener('scroll', updateScrollPadding, { passive: true });
-    // ResizeObserver zachytí rozbalení/sbalení section-navu (0.35s animace)
-    if (window.ResizeObserver) new ResizeObserver(updateScrollPadding).observe(header);
+    updateScrollMargins();
+    if (window.ResizeObserver) new ResizeObserver(updateScrollMargins).observe(header);
   }
-
-  // --- Section nav links: přesný scroll s odečtením výšky headeru ---
-  document.querySelectorAll('.section-nav a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.getElementById(link.getAttribute('href').slice(1));
-      if (!target || !header) return;
-      const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
 
   // --- Scroll-spy for section nav ---
   const sectionNavLinks = document.querySelectorAll('.section-nav__link[data-section]');
