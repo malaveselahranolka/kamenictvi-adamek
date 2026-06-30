@@ -46,6 +46,9 @@
   --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 
   --space-section: 120px;
+
+  /* fine quarried-stone grain (desaturated noise tile) */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
 html {
@@ -67,6 +70,11 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
+  background-image:
+    radial-gradient(1100px 620px at 84% -4%, rgba(154, 118, 71, 0.07), transparent 58%),
+    radial-gradient(900px 760px at -8% 36%, rgba(70, 74, 82, 0.06), transparent 55%),
+    var(--grain);
+  background-attachment: fixed, fixed, fixed;
   color: var(--color-ink-soft);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -1027,6 +1035,35 @@ button:focus-visible {
 .hero__buttons { animation: heroRise 0.9s cubic-bezier(0.22,1,0.36,1) 0.36s both; }
 
 .btn:active { transform: translateY(0) scale(0.985); }
+
+/* --- Surface texture & depth (kill the flat) --- */
+.features,
+.coverage {
+  background-color: var(--color-bg-light);
+  background-image:
+    radial-gradient(1000px 540px at 50% -12%, rgba(154, 118, 71, 0.05), transparent 60%),
+    var(--grain);
+}
+.services,
+.stones {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(1100px 600px at 82% -6%, rgba(154, 118, 71, 0.045), transparent 60%),
+    radial-gradient(900px 600px at 4% 110%, rgba(70, 74, 82, 0.04), transparent 55%),
+    var(--grain);
+}
+.page-header {
+  background-image:
+    var(--grain),
+    radial-gradient(120% 90% at 80% 10%, rgba(154, 118, 71, 0.07) 0%, transparent 55%),
+    linear-gradient(180deg, #f2f1ec 0%, #e9e7e1 100%);
+}
+/* hairline seam at the top of each stone band for cut-slab depth */
+.services,
+.stones,
+.about {
+  position: relative;
+}
 
 /* --- Reduced motion --- */
 @media (prefers-reduced-motion: reduce) {
