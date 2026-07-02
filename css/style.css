@@ -49,14 +49,12 @@
 
   /* no-op layer kept so existing background lists stay valid */
   --grain: none;
-  /* soft polished-marble cloudiness — overlapping tonal blobs, no lines */
+  /* golden marble veining — soft-haloed gold veins over faint cloudiness */
   --stone:
-    radial-gradient(56% 46% at 16% 20%, rgba(64, 70, 80, 0.07), transparent 60%),
-    radial-gradient(52% 44% at 80% 26%, rgba(154, 118, 71, 0.07), transparent 58%),
-    radial-gradient(62% 52% at 44% 66%, rgba(64, 70, 80, 0.06), transparent 62%),
-    radial-gradient(46% 42% at 90% 74%, rgba(154, 118, 71, 0.06), transparent 55%),
-    radial-gradient(52% 46% at 24% 92%, rgba(64, 70, 80, 0.05), transparent 60%),
-    radial-gradient(42% 40% at 64% 6%, rgba(154, 118, 71, 0.05), transparent 55%);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cg fill='none' stroke='%23b8904c' stroke-linecap='round' stroke-opacity='0.08' stroke-width='6'%3E%3Cpath d='M-30 300 C 150 250 260 360 430 300 C 610 238 760 208 940 262'/%3E%3Cpath d='M120 -30 C 160 180 300 300 250 500 C 205 692 330 760 280 940'/%3E%3Cpath d='M-30 648 C 180 604 330 700 520 642 C 704 586 800 588 940 620'/%3E%3Cpath d='M430 300 C 520 340 560 460 660 520 C 722 560 742 642 705 726'/%3E%3C/g%3E%3Cg fill='none' stroke='%23a9793c' stroke-linecap='round' stroke-opacity='0.22' stroke-width='1.4'%3E%3Cpath d='M-30 300 C 150 250 260 360 430 300 C 610 238 760 208 940 262'/%3E%3Cpath d='M120 -30 C 160 180 300 300 250 500 C 205 692 330 760 280 940'/%3E%3Cpath d='M-30 648 C 180 604 330 700 520 642 C 704 586 800 588 940 620'/%3E%3Cpath d='M430 300 C 520 340 560 460 660 520 C 722 560 742 642 705 726'/%3E%3C/g%3E%3Cg fill='none' stroke='%23b8904c' stroke-linecap='round' stroke-opacity='0.14' stroke-width='0.8'%3E%3Cpath d='M260 360 C 320 420 400 428 452 470'/%3E%3Cpath d='M520 642 C 560 704 468 762 520 824'/%3E%3Cpath d='M250 500 C 176 540 138 600 190 664'/%3E%3Cpath d='M660 520 C 620 540 566 520 520 546'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(60% 50% at 20% 24%, rgba(64, 70, 80, 0.045), transparent 60%),
+    radial-gradient(55% 46% at 82% 30%, rgba(154, 118, 71, 0.05), transparent 58%),
+    radial-gradient(60% 52% at 48% 86%, rgba(64, 70, 80, 0.04), transparent 62%);
 }
 
 html {
