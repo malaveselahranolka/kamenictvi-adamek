@@ -427,9 +427,9 @@ document.addEventListener('DOMContentLoaded', () => {
       lastY = y;
       if (Math.abs(dy) > 0.5) {
         dir = dy > 0 ? -1 : 1;
-        boost = Math.min(boost + Math.abs(dy) * 9, 900);
+        boost = Math.min(boost + Math.min(Math.abs(dy), 40) * 2.2, 160);
       }
-      boost *= Math.pow(0.04, dt); // rychlé doznění zrychlení
+      boost *= Math.pow(0.08, dt); // rychlé doznění zrychlení
       hoverFactor += (hoverTarget - hoverFactor) * Math.min(1, dt * 6);
       pos += dir * (BASE + boost) * hoverFactor * dt;
       if (half) {
