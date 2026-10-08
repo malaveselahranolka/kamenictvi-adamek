@@ -2143,8 +2143,9 @@ p {
 .hero__line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  /* rezerva pro diakritiku a přesah kurzívy, aby maska nic neořízla */
+  padding: 0.16em 0.12em 0.1em 0;
+  margin: -0.16em -0.12em -0.1em 0;
 }
 .hero__line > span {
   display: inline-block;
