@@ -7,11 +7,12 @@
   <meta name="description" content="Kamenictví Adámek — rodinná firma s více než 30letou tradicí. Pomníky, kuchyňské desky, krby, schody a dlažby. Působíme v Jeseníku, Mikulovicích, na Jesenicku, Krnově a po celé severní Moravě.">
   <meta name="keywords" content="kamenictví Jeseník, kamenictví Jesenicko, kamenictví Mikulovice, kamenictví Krnov, kamenictví Bruntál, pomníky Jeseník, pomníky Jesenicko, pomníky Mikulovice, náhrobky Jeseník, kamenické služby Jesenicko, žula, mramor, kuchyňské desky, krby">
   <link rel="canonical" href="https://kamenictvi-adamek.cz/">
-  <meta name="theme-color" content="#f6f6f3">
+  <meta name="theme-color" content="#1d2620">
 
   <!-- Preload písma a Hero obrázku -->
-  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" imagesrcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" imagesizes="(min-width: 960px) 56vw, 100vw">
+  <link rel="preload" href="fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/albert-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" imagesrcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" imagesizes="100vw">
 
   <!-- Favicon -->
   <link rel="icon" href="img/adamek-favicon-light.svg" type="image/svg+xml">
@@ -79,10 +80,10 @@
   <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
 
   <!-- Header -->
-  <header class="header">
+  <header class="header header--overlay">
     <div class="container header__inner">
       <a href="index.html" class="header__logo" aria-label="Kamenictví Adámek, úvod">
-        <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
+        <img src="img/adamek-logo-dark-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
       </a>
       <nav class="header__nav" aria-label="Hlavní navigace">
         <a href="reference.html" class="header__nav-link">Reference</a>
@@ -121,49 +122,59 @@
   <main id="obsah">
     <!-- 1. Hero sekce -->
     <section class="hero">
-      <div class="container">
-        <div class="hero__grid">
-          <div class="hero__content">
-            <h1 class="hero__title">Kamenické práce všeho druhu</h1>
-            <p class="lead hero__lead">Rodinné kamenictví z Mikulovic s více než 30letou tradicí. Pomníky, kuchyňské desky, krby, schody a dlažby z více než 80 druhů kamene.</p>
+      <div class="hero__bg">
+        <div class="hero__slides">
+              <figure class="hero__slide is-active">
+                <img src="img/opt/pomniky/img-1052-1600.webp" srcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Dvoudílný žulový pomník s lucernou a vázou" loading="eager" fetchpriority="high" decoding="async">
+              </figure>
+              <figure class="hero__slide">
+                <img src="img/opt/pomniky/img-1034-1600.webp" srcset="img/opt/pomniky/img-1034-480.webp 480w, img/opt/pomniky/img-1034-720.webp 720w, img/opt/pomniky/img-1034-960.webp 960w, img/opt/pomniky/img-1034-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Černý žulový pomník s reliéfem růže" loading="lazy" fetchpriority="low" decoding="async">
+              </figure>
+              <figure class="hero__slide">
+                <img src="img/opt/pomniky/img-1061-1600.webp" srcset="img/opt/pomniky/img-1061-480.webp 480w, img/opt/pomniky/img-1061-720.webp 720w, img/opt/pomniky/img-1061-960.webp 960w, img/opt/pomniky/img-1061-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Žulový pomník se zlaceným nápisem" loading="lazy" fetchpriority="low" decoding="async">
+              </figure>
+              <figure class="hero__slide">
+                <img src="img/opt/pomniky/img-1033-1600.webp" srcset="img/opt/pomniky/img-1033-480.webp 480w, img/opt/pomniky/img-1033-720.webp 720w, img/opt/pomniky/img-1033-960.webp 960w, img/opt/pomniky/img-1033-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Světlý žulový pomník s křížem" loading="lazy" fetchpriority="low" decoding="async">
+              </figure>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__kicker">Rodinné kamenictví · Jesenicko</p>
+          <h1 class="hero__title"><span class="hero__line"><span>Pomníky, které</span></span> <span class="hero__line"><span><em>vydrží</em> generace</span></span></h1>
+          <p class="lead hero__lead">Více než 30 let tesáme, brousíme a osazujeme kámen. Pomníky, kuchyňské desky, krby, schody a dlažby.</p>
             <div class="hero__actions">
-              <a href="tel:+420602277869" class="btn btn--primary">
-                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
-                <span>Zavolat 602 277 869</span>
-              </a>
-              <a href="reference.html" class="btn btn--secondary">
-                <span>Prohlédnout reference</span>
-              </a>
-            </div>
+            <a href="tel:+420602277869" class="btn btn--primary">
+              <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+              <span>Zavolat 602 277 869</span>
+            </a>
+            <a href="reference.html" class="hero__link">
+              <span>Prohlédnout reference</span>
+            </a>
           </div>
-          <div class="media hero__media">
-            <img src="img/opt/pomniky/img-1052-960.webp"
-                 srcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w"
-                 sizes="(min-width: 960px) 56vw, 100vw"
-                 width="1600" height="1200"
-                 alt="Žulový pomník s lucernou a vázou"
-                 loading="eager" fetchpriority="high" decoding="async">
-            <div class="hero__badge">
-              <span class="hero__badge-num">30+</span>
-              <span class="hero__badge-text">let rodinné<br>tradice</span>
+        </div>
+        <div class="hero__foot">
+          <dl class="hero__facts">
+            <div><dt>30+</dt><dd>let rodinné tradice</dd></div>
+            <div><dt>80+</dt><dd>druhů žul a mramorů</dd></div>
+            <div><dt>Po-Ne</dt><dd>8:00-20:00</dd></div>
+            <div><dt>Mikulovice</dt><dd>celá severní Morava</dd></div>
+          </dl>
+            <div class="hero__dots" role="group" aria-label="Fotografie realizací">
+              <button type="button" class="hero__dot is-active" aria-label="Fotografie 1 ze 4" aria-current="true"><span></span></button>
+              <button type="button" class="hero__dot" aria-label="Fotografie 2 ze 4"><span></span></button>
+              <button type="button" class="hero__dot" aria-label="Fotografie 3 ze 4"><span></span></button>
+              <button type="button" class="hero__dot" aria-label="Fotografie 4 ze 4"><span></span></button>
             </div>
-          </div>
         </div>
       </div>
     </section>
 
 
-    <div class="ribbon" role="region" aria-label="Co vyrábíme">
-      <div class="ribbon__viewport">
-      <div class="ribbon__track">
-        <ul class="ribbon__list" role="list"><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M13 31V16c0-3.2 2.3-5.5 5.2-5.5 1.7 0 2.6.9 3.6.9s1.9-1.4 3.6-1.4c2.6 0 4.6 2.2 4.6 5.3V31"/> <path class="rf" d="M9 31h24v4.5H9z"/> <path class="rg" d="M17.5 18.5h8M16.5 23h10M19 27h5"/></svg><span>Pomníky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M21 22V11.5c0-2.6 1.9-4.5 4.5-4.5S30 8.9 30 11.5V22"/> <path class="rf" d="M4 29.5L13 23h22l-9 6.5z"/> <path class="rf" d="M4 29.5V33h22v-3.5M26 33l9-6.5V23"/> <path class="rg" d="M25.5 10.5v6.5M23.3 12.8h4.4"/></svg><span>Náhrobky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M3.5 23L12 16h24.5L28 23z"/> <path class="rf" d="M3.5 23v4h24.5v-4M28 27l8.5-7v-4"/> <path class="rl" d="M14.5 21l2.4-2h8.5l-2.4 2z"/> <path class="rg" d="M23.5 18.2v-6.4c0-1.3 1-2.3 2.3-2.3h2.8v2.3"/></svg><span>Kuchyňské desky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M6 8.5h28v3.5H6z"/> <path class="rf" d="M9 12v23h22V12"/> <path class="rl" d="M14.5 35V24.5a5.5 5.5 0 0 1 11 0V35M5 35h30"/> <path class="rg rg--fill" d="M20 33c-2.6-1.4-2.6-4.6-.2-7.4.3 1.8 2 2.3 2.2 4.3.2 1.6-.6 2.6-2 3.1z"/></svg><span>Krby</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M5 35V28h8v-7h7v-7h7V7h8v28z"/> <path class="rg" d="M8 21.5L33 4M11.5 19.2V26M18.5 14.4V20M25.5 9.6V14"/></svg><span>Schody</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M4 34l7.5-22h17L36 34z"/> <path class="rl" d="M8.2 21.5h23.6M6.3 27.6h27.4M17 12l-1.2 9.5M24.5 21.5l.9 6.1M14.3 27.6l-1 6.4"/> <path class="rg rg--fill" d="M24.5 21.5h7.3l2 6.1h-8.4z"/></svg><span>Dlažby</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M10 6h20v23H10z"/> <path class="rl" d="M20 6v23M10 17.5h20"/> <path class="rg rg--fill" d="M6 29h28v4H6z"/></svg><span>Parapety</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rg" d="M10.5 32L19.6 8.5h.8L29.5 32M14 24h12M7.5 32h6.5M26 32h6.5"/> <path class="rs" d="M32 3.5c.5 2.8 1.5 3.8 4.2 4.3-2.7.5-3.7 1.5-4.2 4.3-.5-2.8-1.5-3.8-4.2-4.3 2.7-.5 3.7-1.5 4.2-4.3z"/></svg><span>Přezlacení nápisů</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M5 14h30v19H5z"/> <path class="rg" d="M20 23.5m-6 0a6 6 0 1 0 6-6 3.6 3.6 0 1 0 3.6 3.6"/> <path class="rl" d="M9 19.5l3.5-3.5M9 24l2-2"/> <path class="rs" d="M32 1.5c.5 2.8 1.5 3.8 4.2 4.3-2.7.5-3.7 1.5-4.2 4.3-.5-2.8-1.5-3.8-4.2-4.3 2.7-.5 3.7-1.5 4.2-4.3z"/></svg><span>Renovace</span></li></ul>
-        <ul class="ribbon__list" role="list" aria-hidden="true"><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M13 31V16c0-3.2 2.3-5.5 5.2-5.5 1.7 0 2.6.9 3.6.9s1.9-1.4 3.6-1.4c2.6 0 4.6 2.2 4.6 5.3V31"/> <path class="rf" d="M9 31h24v4.5H9z"/> <path class="rg" d="M17.5 18.5h8M16.5 23h10M19 27h5"/></svg><span>Pomníky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M21 22V11.5c0-2.6 1.9-4.5 4.5-4.5S30 8.9 30 11.5V22"/> <path class="rf" d="M4 29.5L13 23h22l-9 6.5z"/> <path class="rf" d="M4 29.5V33h22v-3.5M26 33l9-6.5V23"/> <path class="rg" d="M25.5 10.5v6.5M23.3 12.8h4.4"/></svg><span>Náhrobky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M3.5 23L12 16h24.5L28 23z"/> <path class="rf" d="M3.5 23v4h24.5v-4M28 27l8.5-7v-4"/> <path class="rl" d="M14.5 21l2.4-2h8.5l-2.4 2z"/> <path class="rg" d="M23.5 18.2v-6.4c0-1.3 1-2.3 2.3-2.3h2.8v2.3"/></svg><span>Kuchyňské desky</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M6 8.5h28v3.5H6z"/> <path class="rf" d="M9 12v23h22V12"/> <path class="rl" d="M14.5 35V24.5a5.5 5.5 0 0 1 11 0V35M5 35h30"/> <path class="rg rg--fill" d="M20 33c-2.6-1.4-2.6-4.6-.2-7.4.3 1.8 2 2.3 2.2 4.3.2 1.6-.6 2.6-2 3.1z"/></svg><span>Krby</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M5 35V28h8v-7h7v-7h7V7h8v28z"/> <path class="rg" d="M8 21.5L33 4M11.5 19.2V26M18.5 14.4V20M25.5 9.6V14"/></svg><span>Schody</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M4 34l7.5-22h17L36 34z"/> <path class="rl" d="M8.2 21.5h23.6M6.3 27.6h27.4M17 12l-1.2 9.5M24.5 21.5l.9 6.1M14.3 27.6l-1 6.4"/> <path class="rg rg--fill" d="M24.5 21.5h7.3l2 6.1h-8.4z"/></svg><span>Dlažby</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M10 6h20v23H10z"/> <path class="rl" d="M20 6v23M10 17.5h20"/> <path class="rg rg--fill" d="M6 29h28v4H6z"/></svg><span>Parapety</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rg" d="M10.5 32L19.6 8.5h.8L29.5 32M14 24h12M7.5 32h6.5M26 32h6.5"/> <path class="rs" d="M32 3.5c.5 2.8 1.5 3.8 4.2 4.3-2.7.5-3.7 1.5-4.2 4.3-.5-2.8-1.5-3.8-4.2-4.3 2.7-.5 3.7-1.5 4.2-4.3z"/></svg><span>Přezlacení nápisů</span></li><li class="ribbon__item"><svg class="ribbon__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path class="rf" d="M5 14h30v19H5z"/> <path class="rg" d="M20 23.5m-6 0a6 6 0 1 0 6-6 3.6 3.6 0 1 0 3.6 3.6"/> <path class="rl" d="M9 19.5l3.5-3.5M9 24l2-2"/> <path class="rs" d="M32 1.5c.5 2.8 1.5 3.8 4.2 4.3-2.7.5-3.7 1.5-4.2 4.3-.5-2.8-1.5-3.8-4.2-4.3 2.7-.5 3.7-1.5 4.2-4.3z"/></svg><span>Renovace</span></li></ul>
-      </div>
-      </div>
-    </div>
 
     <!-- 2. Služby (bento) -->
-    <section class="section" id="sluzby">
+    <section class="section theme-light" id="sluzby">
       <div class="container">
         <div class="section-header">
           <h2>Naše služby</h2>
@@ -259,6 +270,76 @@
       </div>
     </section>
 
+
+    <!-- Vybrané realizace -->
+    <section class="section works-section" id="realizace">
+      <div class="container">
+        <div class="stones-header">
+          <div>
+            <h2>Vybrané realizace</h2>
+            <p class="lead" style="margin-top: 12px;">Každá zakázka je originál. Malý průřez tím, co jsme vyrobili a osadili.</p>
+          </div>
+          <div class="stones-nav">
+            <button type="button" class="btn btn--secondary btn--icon" id="workPrev" aria-label="Předchozí realizace"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+            <button type="button" class="btn btn--secondary btn--icon" id="workNext" aria-label="Další realizace"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <ul class="works" id="workScroller" role="list">
+        <li class="work">
+          <a class="work__link" href="reference.html#pomniky">
+            <span class="media work__media"><img src="img/opt/pomniky/img-1047-720.webp" srcset="img/opt/pomniky/img-1047-480.webp 480w, img/opt/pomniky/img-1047-720.webp 720w, img/opt/pomniky/img-1047-960.webp 960w, img/opt/pomniky/img-1047-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Pomník z červené žuly s lucernou" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Pomníky</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#kuchyne-krby">
+            <span class="media work__media"><img src="img/opt/kuchyne-krby/img-1071-720.webp" srcset="img/opt/kuchyne-krby/img-1071-480.webp 480w, img/opt/kuchyne-krby/img-1071-720.webp 720w, img/opt/kuchyne-krby/img-1071-960.webp 960w, img/opt/kuchyne-krby/img-1071-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Kuchyňská pracovní deska z leštěné žuly" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Kuchyně a krby</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#pomniky">
+            <span class="media work__media"><img src="img/opt/pomniky/img-1056-720.webp" srcset="img/opt/pomniky/img-1056-480.webp 480w, img/opt/pomniky/img-1056-720.webp 720w, img/opt/pomniky/img-1056-960.webp 960w, img/opt/pomniky/img-1056-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Oválný žulový pomník s fotografiemi" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Pomníky</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#schody">
+            <span class="media work__media"><img src="img/opt/schody/schody-3-720.webp" srcset="img/opt/schody/schody-3-480.webp 480w, img/opt/schody/schody-3-720.webp 720w, img/opt/schody/schody-3-960.webp 960w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Kamenné schodiště u rodinného domu" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Schody a dlažby</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#kuchyne-krby">
+            <span class="media work__media"><img src="img/opt/kuchyne-krby/krb6-720.webp" srcset="img/opt/kuchyne-krby/krb6-480.webp 480w, img/opt/kuchyne-krby/krb6-720.webp 720w, img/opt/kuchyne-krby/krb6-960.webp 960w, img/opt/kuchyne-krby/krb6-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Krb s kamenným obkladem" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Kuchyně a krby</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#pomniky">
+            <span class="media work__media"><img src="img/opt/pomniky/img-1064-720.webp" srcset="img/opt/pomniky/img-1064-480.webp 480w, img/opt/pomniky/img-1064-720.webp 720w, img/opt/pomniky/img-1064-960.webp 960w, img/opt/pomniky/img-1064-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Dvojhrob s dělenou krycí deskou" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Pomníky</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#doplnky">
+            <span class="media work__media"><img src="img/opt/doplnky/img-1073-720.webp" srcset="img/opt/doplnky/img-1073-480.webp 480w, img/opt/doplnky/img-1073-720.webp 720w, img/opt/doplnky/img-1073-960.webp 960w, img/opt/doplnky/img-1073-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Kamenný sloupek do interiéru" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Bytové doplňky</span>
+          </a>
+        </li>
+        <li class="work">
+          <a class="work__link" href="reference.html#ostatni">
+            <span class="media work__media"><img src="img/opt/ostatni/img-1089-720.webp" srcset="img/opt/ostatni/img-1089-480.webp 480w, img/opt/ostatni/img-1089-720.webp 720w, img/opt/ostatni/img-1089-960.webp 960w, img/opt/ostatni/img-1089-1600.webp 1600w" sizes="(min-width: 960px) 340px, 72vw" width="1600" height="1200" alt="Studna s kamennou podezdívkou" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="work__cat">Ostatní</span>
+          </a>
+        </li>
+      </ul>
+      <div class="container works__more">
+        <a href="reference.html" class="link">Všechny reference <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      </div>
+    </section>
+
     <!-- 3. O nás (statement + fakta) -->
     <section class="process" id="postup">
       <div class="container">
@@ -299,7 +380,7 @@
               <g class="pick-tile pick-tile--2"><rect x="31" y="38" width="34" height="42" rx="6" fill="#b57b6b"/><rect x="31" y="38" width="34" height="42" rx="6" fill="url(#artSpeck)" class="art-line"/></g>
               <g class="pick-check">
                 <circle cx="64" cy="30" r="10" fill="#fff"/>
-                <path d="M59.5 30.2l3.2 3.2 6-6.4" fill="none" stroke="#2e4a3c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+                <path d="M59.5 30.2l3.2 3.2 6-6.4" fill="none" stroke="#1d2620" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
               </g>
             </svg>
             <span class="process__num" aria-hidden="true">2</span>
@@ -367,27 +448,13 @@
       </div>
     </section>
 
-    <section class="section" id="o-nas">
+    <section class="section theme-light" id="o-nas">
       <div class="container">
         <div class="about__grid">
           <div class="about__content">
-            <h2>Řemeslo, které je v rodině už celou generaci</h2>
+            <h2>Řemeslo, které je v rodině už <em>celou generaci</em></h2>
             <p class="lead about__lead">Jsme rodinná firma s více než 30letou tradicí v oboru kamenických a stavebnických služeb. Sídlíme v Mikulovicích a pracujeme na Jesenicku, v Krnově a po celé severní Moravě.</p>
             <p class="about__body">Díky dlouholetým zkušenostem a individuálnímu přístupu ke každé zakázce garantujeme kvalitu, na kterou se můžete spolehnout. Ceny jsou férové, bez zbytečných přirážek a prostředníků.</p>
-            <div class="about__stats">
-              <div class="about__stat">
-                <div class="about__stat-val">30+</div>
-                <div class="about__stat-lbl">let tradice</div>
-              </div>
-              <div class="about__stat">
-                <div class="about__stat-val">80+</div>
-                <div class="about__stat-lbl">druhů žul a mramorů</div>
-              </div>
-              <div class="about__stat">
-                <div class="about__stat-val">Po-Ne</div>
-                <div class="about__stat-lbl">8:00-20:00</div>
-              </div>
-            </div>
           </div>
           <div class="media about__media">
             <img src="img/opt/pomniky/img-1033-960.webp"
@@ -581,7 +648,7 @@
     </section>
 
     <!-- 5. Kde působíme -->
-    <section class="section" id="pusobnost">
+    <section class="section theme-light" id="pusobnost">
       <div class="container">
         <div class="coverage__grid">
           <div class="coverage__content">
@@ -605,47 +672,47 @@
 
               <!-- Oblast severní Moravy -->
               <path d="M100 150 Q180 70, 320 60 Q440 50, 560 80 Q660 100, 730 170 Q760 220, 740 300 Q720 370, 640 420 Q540 460, 400 450 Q260 440, 160 390 Q100 350, 80 280 Q70 220, 100 150Z"
-                    fill="rgb(46 74 60 / 0.06)" stroke="rgb(46 74 60 / 0.25)" stroke-width="1.5"/>
+                    fill="rgb(226 166 74 / 0.06)" stroke="rgb(226 166 74 / 0.25)" stroke-width="1.5"/>
 
               <!-- Spojnice od Mikulovic ke všem městům -->
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="230" y2="128" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="419" y2="184" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="332" y2="224" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="144" y2="232" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="249" y2="384" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="641" y2="292" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="494" y2="244" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
-              <line class="map-line" pathLength="1" x1="279" y1="104" x2="321" y2="304" stroke="rgb(46 74 60 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="230" y2="128" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="419" y2="184" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="332" y2="224" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="144" y2="232" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="249" y2="384" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="641" y2="292" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="494" y2="244" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line class="map-line" pathLength="1" x1="279" y1="104" x2="321" y2="304" stroke="rgb(226 166 74 / 0.25)" stroke-width="1" stroke-dasharray="4,4"/>
 
               <!-- Mikulovice (sídlo) -->
               <circle class="map-pulse" cx="279" cy="104" r="12" fill="var(--accent)" opacity="0.2"/>
               <circle cx="279" cy="104" r="6" fill="var(--accent)"/>
-              <text x="279" y="84" text-anchor="middle" fill="var(--accent)" font-family="Geist, sans-serif" font-size="14" font-weight="600">Mikulovice</text>
+              <text x="279" y="84" text-anchor="middle" fill="var(--accent)" font-family="Albert Sans, sans-serif" font-size="14" font-weight="600">Mikulovice</text>
 
               <!-- Ostatní města -->
               <circle class="map-city" cx="230" cy="128" r="4" fill="var(--muted)"/>
-              <text x="185" y="122" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Jeseník</text>
+              <text x="185" y="122" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Jeseník</text>
 
               <circle class="map-city" cx="419" cy="184" r="4" fill="var(--muted)"/>
-              <text x="419" y="170" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Krnov</text>
+              <text x="419" y="170" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Krnov</text>
 
               <circle class="map-city" cx="332" cy="224" r="4" fill="var(--muted)"/>
-              <text x="375" y="220" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Bruntál</text>
+              <text x="375" y="220" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Bruntál</text>
 
               <circle class="map-city" cx="144" cy="232" r="4" fill="var(--muted)"/>
-              <text x="144" y="255" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Šumperk</text>
+              <text x="144" y="255" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Šumperk</text>
 
               <circle class="map-city" cx="249" cy="384" r="4" fill="var(--muted)"/>
-              <text x="249" y="407" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Olomouc</text>
+              <text x="249" y="407" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Olomouc</text>
 
               <circle class="map-city" cx="494" cy="244" r="4" fill="var(--muted)"/>
-              <text x="494" y="267" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Opava</text>
+              <text x="494" y="267" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Opava</text>
 
               <circle class="map-city" cx="321" cy="304" r="4" fill="var(--muted)"/>
-              <text x="321" y="327" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Moravský Beroun</text>
+              <text x="321" y="327" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Moravský Beroun</text>
 
               <circle class="map-city" cx="641" cy="292" r="4" fill="var(--muted)"/>
-              <text x="641" y="315" text-anchor="middle" fill="var(--text)" font-family="Geist, sans-serif" font-size="13">Ostrava</text>
+              <text x="641" y="315" text-anchor="middle" fill="var(--text)" font-family="Albert Sans, sans-serif" font-size="13">Ostrava</text>
             </svg>
           </div>
         </div>
@@ -653,12 +720,12 @@
     </section>
 
     <!-- 6. Kontaktní panel -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section theme-light theme-light--continue">
       <div class="container">
         <div class="contact-panel">
           <div class="contact-panel__inner">
             <div class="contact-panel__content">
-              <h2>Máte zájem o naše služby?</h2>
+              <h2>Máte zájem o naše <em>služby</em>?</h2>
               <p>Rádi vám poradíme s výběrem materiálu a zpracujeme nezávaznou cenovou nabídku.</p>
               <div class="contact-panel__actions">
                 <a href="tel:+420602277869" class="btn btn--primary">
@@ -697,7 +764,7 @@
       <div class="footer__grid">
         <div class="footer__col">
           <a href="index.html" class="footer__logo" aria-label="Kamenictví Adámek, úvod">
-            <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
+            <img src="img/adamek-logo-dark-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
           </a>
           <p class="footer__about">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb.</p>
         </div>

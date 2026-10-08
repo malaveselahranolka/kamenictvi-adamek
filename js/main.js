@@ -74,44 +74,60 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========================================================================
   // 3. Vzorky kamene - horizontální scroller se šipkami (Index)
   // ========================================================================
-  const stoneScroller = document.getElementById('stoneScroller');
-  const stonePrev = document.getElementById('stonePrev');
-  const stoneNext = document.getElementById('stoneNext');
-
-  if (stoneScroller && stonePrev && stoneNext) {
+  const setupScroller = (scroller, prev, next, itemSelector) => {
+    if (!scroller || !prev || !next) return;
     const updateButtons = () => {
-      const maxScroll = stoneScroller.scrollWidth - stoneScroller.clientWidth;
-      stonePrev.disabled = stoneScroller.scrollLeft <= 5;
-      stoneNext.disabled = stoneScroller.scrollLeft >= maxScroll - 5;
+      const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+      prev.disabled = scroller.scrollLeft <= 5;
+      next.disabled = scroller.scrollLeft >= maxScroll - 5;
     };
-
-    const getScrollStep = () => {
-      const item = stoneScroller.querySelector('.stone-item');
-      if (item) {
-        const itemWidth = item.getBoundingClientRect().width;
-        // Posun o šířku 3 položek včetně mezery (16px)
-        return (itemWidth + 16) * 3;
-      }
-      return stoneScroller.clientWidth * 0.75;
+    const step = () => {
+      const item = scroller.querySelector(itemSelector);
+      const gap = parseFloat(getComputedStyle(scroller).columnGap) || 16;
+      return item ? (item.getBoundingClientRect().width + gap) * Math.max(1, Math.floor(scroller.clientWidth / 2 / (item.getBoundingClientRect().width + gap))) : scroller.clientWidth * 0.75;
     };
-
-    const scrollByStep = (direction) => {
-      const step = getScrollStep() * direction;
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      stoneScroller.scrollBy({
-        left: step,
-        behavior: prefersReducedMotion ? 'auto' : 'smooth'
-      });
+    const go = (dir) => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      scroller.scrollBy({ left: step() * dir, behavior: reduce ? 'auto' : 'smooth' });
     };
-
-    stonePrev.addEventListener('click', () => scrollByStep(-1));
-    stoneNext.addEventListener('click', () => scrollByStep(1));
-
-    stoneScroller.addEventListener('scroll', updateButtons, { passive: true });
+    prev.addEventListener('click', () => go(-1));
+    next.addEventListener('click', () => go(1));
+    scroller.addEventListener('scroll', updateButtons, { passive: true });
     window.addEventListener('resize', updateButtons);
-
-    // Výchozí inicializace tlačítek
     updateButtons();
+  };
+  setupScroller(document.getElementById('stoneScroller'), document.getElementById('stonePrev'), document.getElementById('stoneNext'), '.stone-item');
+  setupScroller(document.getElementById('workScroller'), document.getElementById('workPrev'), document.getElementById('workNext'), '.work');
+
+  // Galerie realizací: tažení myší
+  const works = document.getElementById('workScroller');
+  if (works) {
+    let startX = 0;
+    let startLeft = 0;
+    let dragging = false;
+    let moved = 0;
+    works.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true;
+      moved = 0;
+      startX = e.clientX;
+      startLeft = works.scrollLeft;
+    });
+    window.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      moved = Math.max(moved, Math.abs(dx));
+      if (moved > 4) works.classList.add('is-dragging');
+      works.scrollLeft = startLeft - dx;
+    });
+    window.addEventListener('pointerup', () => {
+      if (!dragging) return;
+      dragging = false;
+      requestAnimationFrame(() => works.classList.remove('is-dragging'));
+    });
+    works.addEventListener('click', (e) => {
+      if (moved > 4) e.preventDefault();
+    }, true);
   }
 
   // ========================================================================
@@ -395,59 +411,50 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------------------------------------------------------
-  // Pás se službami: plynulý pohyb, scroll ho zrychlí a otočí
+  // Hero: střídání fotografií realizací
   // ---------------------------------------------------------
-  const ribbon = document.querySelector('.ribbon');
-  const ribbonTrack = ribbon && ribbon.querySelector('.ribbon__track');
-  if (ribbonTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const BASE = 42; // px za sekundu
-    let pos = 0;
-    let dir = -1;
-    let boost = 0;
-    let hoverFactor = 1;
-    let hoverTarget = 1;
-    let lastY = window.scrollY;
-    let lastT = 0;
-    let running = false;
-    let half = 0;
-    const measure = () => {
-      half = ribbonTrack.firstElementChild.getBoundingClientRect().width;
+  const hero = document.querySelector('.hero');
+  const slides = hero ? Array.from(hero.querySelectorAll('.hero__slide')) : [];
+  const dots = hero ? Array.from(hero.querySelectorAll('.hero__dot')) : [];
+  if (slides.length > 1) {
+    const DUR = 6000;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    hero.style.setProperty('--slide-dur', DUR / 1000 + 's');
+    let index = 0;
+    let timer = 0;
+    let visible = true;
+    const show = (i) => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle('is-active', k === index));
+      dots.forEach((d, k) => {
+        d.classList.toggle('is-active', k === index);
+        if (k === index) d.setAttribute('aria-current', 'true');
+        else d.removeAttribute('aria-current');
+      });
     };
-    measure();
-    if (window.ResizeObserver) new ResizeObserver(measure).observe(ribbonTrack.firstElementChild);
-    ribbon.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hoverTarget = 0.18; });
-    ribbon.addEventListener('pointerleave', () => { hoverTarget = 1; });
-
-    const tick = (t) => {
-      if (!running) return;
-      const dt = lastT ? Math.min((t - lastT) / 1000, 0.05) : 0;
-      lastT = t;
-      const y = window.scrollY;
-      const dy = y - lastY;
-      lastY = y;
-      if (Math.abs(dy) > 0.5) {
-        dir = dy > 0 ? -1 : 1;
-        boost = Math.min(boost + Math.min(Math.abs(dy), 40) * 2.2, 160);
-      }
-      boost *= Math.pow(0.08, dt); // rychlé doznění zrychlení
-      hoverFactor += (hoverTarget - hoverFactor) * Math.min(1, dt * 6);
-      pos += dir * (BASE + boost) * hoverFactor * dt;
-      if (half) {
-        if (pos <= -half) pos += half;
-        if (pos > 0) pos -= half;
-      }
-      ribbonTrack.style.transform = `translate3d(${pos.toFixed(2)}px,0,0)`;
-      requestAnimationFrame(tick);
+    const schedule = () => {
+      clearTimeout(timer);
+      if (reduce || !visible || document.hidden) return;
+      timer = setTimeout(() => {
+        show(index + 1);
+        schedule();
+      }, DUR);
     };
-    new IntersectionObserver(([entry]) => {
-      const was = running;
-      running = entry.isIntersecting;
-      if (running && !was) {
-        lastT = 0;
-        lastY = window.scrollY;
-        requestAnimationFrame(tick);
-      }
-    }).observe(ribbon);
+    dots.forEach((d, k) =>
+      d.addEventListener('click', () => {
+        show(k);
+        schedule();
+      }),
+    );
+    document.addEventListener('visibilitychange', schedule);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        visible = entry.isIntersecting;
+        hero.classList.toggle('is-paused', !visible);
+        schedule();
+      }).observe(hero);
+    }
+    schedule();
   }
 
 });
