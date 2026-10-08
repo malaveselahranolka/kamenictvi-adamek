@@ -27,7 +27,7 @@ Rodinná firma s 30+ letou tradicí, sídlo Mikulovice, 80+ druhů žul a mramor
 - Služby: pomníky a náhrobky, schody a dlažby, kuchyně a krby (desky, obklady, sloupy), bytové doplňky, ostatní zakázky na míru, přezlacení, renovace, opravy.
 - Ceník bez konkrétních částek: výroba „Dle rozsahu", služby „Po domluvě", zaměření a konzultace zdarma.
 - Kontakt: Sokolská 595, 790 84 Mikulovice · 602 277 869 · info@kamenictvi-adamek.cz · Po–Ne 8:00–20:00.
-- Žádný kontaktní formulář (bez backendu).
+- Konfigurátor s nezávaznou poptávkou; online odesílání vyžaduje připojenou e-mailovou službu. Telefon zůstává dostupný.
 - loga.html, plakat.html, vizitka.html jsou interní tiskové návrhy, mimo web — neměnit.
 
 ## Brand Commitments

@@ -1,0 +1,1 @@
+- [E-mailová služba konfigurátoru](memory/emailova-sluzba.md) — volba a připojení služby zatím nedodané uživatelem.

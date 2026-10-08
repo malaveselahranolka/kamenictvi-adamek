@@ -1,0 +1,6 @@
+# Referenční podklady zachovat po bajtech; manifest kontroluje SHA-256.
+konfigurator/assets/** -text
+konfigurator/fonts/** -text
+konfigurator/models/** -text
+konfigurator/textures/** -text
+konfigurator/Tvary/thumbs/** -text

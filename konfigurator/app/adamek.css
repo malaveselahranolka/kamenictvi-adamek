@@ -1,0 +1,104 @@
+/* Brand tokens match css/style.css; engraving fonts and geometry stay unchanged. */
+@font-face { font-family: 'Albert Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('../../fonts/albert-sans-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Albert Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('../../fonts/albert-sans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F; }
+@font-face { font-family: 'Libre Caslon Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('../../fonts/libre-caslon-display-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Libre Caslon Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('../../fonts/libre-caslon-display-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F; }
+/* The fourth engraving style in the reference uses thin Inter capitals. */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 200 800; font-display: swap; src: url('../fonts/inter-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 200 800; font-display: swap; src: url('../fonts/inter-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F; }
+:root, .app--studio {
+  --adamek-bg: #1d2620; --adamek-surface: #243029; --adamek-surface-strong: #26342c;
+  --adamek-line: #435047; --adamek-text: #ece9e2; --adamek-muted: #b3b0a6; --adamek-dark: #ece9e2;
+  --adamek-accent: #e2a64a; --adamek-accent-soft: #3a382a;
+  --adamek-accent-bg: rgba(226,166,74,.12); --adamek-accent-border: rgba(226,166,74,.4);
+  --accent: #e2a64a; --accent-2: #ecb968; --text-2: #d1cec5; --line-strong: #627065;
+  --font-sans: 'Albert Sans', system-ui, sans-serif;
+  --radius-xs: 3px; --radius-sm: 6px; --radius-md: 8px; --radius-lg: 12px;
+  --accent-glow: none; --shadow-accent-glow: none;
+  --ease-out: cubic-bezier(.22,1,.36,1);
+}
+body { background: var(--adamek-bg); }
+button, input, textarea, select { font-family: var(--font-sans); }
+.boot-shell { min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; padding: 24px; text-align: center; }
+.boot-shell h1 { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 36px; font-weight: 400; margin: 0; }
+.boot-shell p { margin: 0; color: var(--muted); }
+.boot-shell a { color: var(--accent); }
+.app--studio .topbar { background: #1d2620; height: 84px; padding-inline: 24px; }
+.brand-logo { height: 66px; width: 144px; object-fit: contain; }
+.brand-sub { font-size: 15px; }
+.top-phone { color: var(--text); }
+.top-cta, .dock-btn.primary, .btn-primary, .btn-orange { color: #1d2620 !important; background: var(--accent); border-radius: 3px; box-shadow: none !important; }
+.top-cta:hover, .dock-btn.primary:hover, .btn-primary:hover { background: var(--accent-2); transform: none; }
+.app--studio .leftrail { background: #1d2620; border-color: var(--line); }
+.app--studio .railstep { color: var(--muted); border-radius: 3px; }
+.app--studio .railstep.active { background: #26342c; border-color: var(--accent-border); color: var(--accent); box-shadow: none; }
+.app--studio .railstep.done { color: var(--text); }
+.railstep::before { background: #26342c; border-color: var(--line); color: var(--text); }
+.railstep.active::before { background: var(--accent); color: #1d2620; }
+.railstep-check { background: var(--accent); color: #1d2620; }
+.studio-panel, .editor { background: #243029; }
+.sp-foot { background: #243029; border-color: var(--line); }
+.sp-head .ed-title { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 32px; letter-spacing: -.03em; }
+.grave-type, .shape, .swatch, .ornament-option, .construction-toggle, .dimstep, .inscription-layout-controls { background: #26342c; border-color: var(--line); color: var(--text); }
+.grave-type.sel, .shape.sel { background: #343a2b; border-color: var(--accent); box-shadow: none; }
+.grave-type-visual { background: #e9e5dc; }
+.grave-type-copy strong, .grave-type-copy small, .dimstep input { color: var(--text); }
+.grave-type-copy > span { color: var(--muted); }
+.size-preset, .chip, .pill, .dock-btn, .person-card, .extra, .inscr-field input, .inscr-field textarea, .modal input, .modal textarea, .modal select { background: #26342c; color: var(--text); border-color: var(--line); border-radius: 3px; }
+.modal input::placeholder, .modal textarea::placeholder, .inscr-field input::placeholder, .inscr-field textarea::placeholder { color: var(--muted); opacity: .85; }
+.size-preset.sel, .chip.on, .pill.sel { color: var(--accent); border-color: var(--accent); background: #343a2b; }
+.helpbar, .info-note, .size-note { background: #1d2620; border-color: var(--line); color: var(--text); }
+.trust-strip, .trust-strip span { color: var(--muted); }
+.trust-strip svg { color: var(--accent); }
+.modal, .shape-gallery { background: #243029; color: var(--text); }
+.modal h3, .shape-gallery h3 { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 30px; }
+.summary-card, .summary-main, .inquiry-details { background: #26342c; border-color: var(--line); }
+.glass, .angles, .share-menu { background: #243029; color: var(--text); border-color: var(--line); }
+.app--studio .angles { padding: 4px; border-radius: 6px; }
+.app--studio .angle { color: var(--muted); background: transparent; border-radius: 3px; border-color: transparent; }
+.app--studio .angle.active { background: var(--accent); color: #1d2620 !important; border-color: var(--accent); }
+.preset-card, .preset-card.sel { background: #26342c; border-radius: 3px; }
+.preset-card strong { color: var(--text); }
+.preset-card small { color: var(--muted); }
+.preset-card:hover, .tile:hover, .swatch:hover, .grave-type:hover { transform: none; background: #2b392f; }
+.combination-card, .combination-card.sel { background: #26342c; border-radius: 3px; }
+.combination-card strong { color: var(--text); }
+.combination-card small { color: var(--muted); }
+.app--studio .ml .tag { color: var(--accent); }
+.modal--gallery .gallery-head h3 { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 28px; white-space: normal; color: var(--text); }
+.gallery-item:hover { transform: none; border-color: var(--accent); }
+.swatch .mat-recommend, .swatch .soft-label, .soft-label { color: var(--accent); }
+.summary-estimate, .summary-inscription-note, .person-placement button, .person-placement, .inscription-proof-surface { background: #26342c; color: var(--text); }
+.summary-estimate h3, .proposal-head h3 { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; }
+.reassurance, .reassurance strong, .reassurance svg { color: var(--muted); }
+.scene-choice { background: #243029; border-color: var(--line); }
+.scene-choice button { font-family: var(--font-sans); color: var(--text); }
+.scene-choice button[aria-pressed="true"] { background: var(--accent); color: #1d2620; }
+.stage-caption > strong { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 36px; color: #1d2620; }
+.stage-caption > span, .stage-caption > small, .scene-choice > span { color: #435047; }
+.watermark { opacity: .25; }
+.watermark img { height: auto; max-height: 105px; }
+.app--studio .toast { background: #243029; color: var(--text); border: 1px solid var(--line); border-radius: 6px; }
+.viewer-loading, .viewer-loading-text, .viewer-error { color: #1d2620; }
+.upload-box { background: #26342c; border-color: var(--line); }
+.app--studio .tile { color: var(--text); }
+.price-scope { color: var(--muted); }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid #e2a64a; outline-offset: 3px; }
+button { touch-action: manipulation; }
+button:active { filter: brightness(.9); }
+/* Selection and progress should respond immediately. */
+.rail-fill, .railstep, .grave-type, .shape, .swatch, .pill, .chip, .dock-btn { transition: none; }
+*, *::before, *::after { transition: none; animation: none; }
+@media (max-width: 900px) {
+  .app--studio .topbar { height: 70px; padding-inline: 14px; }
+  .app--studio .brand-logo { width: 116px; height: 55px; max-width: 116px; }
+  .app--studio .top-cta { border-radius: 3px; }
+  .sp-head .ed-title { font-size: 30px; }
+  .stage-caption > strong { font-size: 24px; }
+  .sp-foot { background: #243029; }
+  .mobile-preview-link { color: var(--text); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

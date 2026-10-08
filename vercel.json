@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "functions": { "api/contact.mjs": { "maxDuration": 30 } },
+  "redirects": [{ "source": "/konfigurator", "destination": "/konfigurator/", "permanent": true }]
+}

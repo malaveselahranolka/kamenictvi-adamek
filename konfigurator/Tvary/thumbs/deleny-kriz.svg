@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Dělená deska s výřezem kříže</title>
+  <desc id="desc">Dva díly žuly Labrador. Volný prostor mezi levým sloupkem a pravou nápisovou deskou vytváří kříž.</desc>
+  <defs>
+    <linearGradient id="background" x2="0" y2="1"><stop stop-color="#eceff1"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <linearGradient id="stone" x2="1" y2="1"><stop stop-color="#314657"/><stop offset=".54" stop-color="#182736"/><stop offset="1" stop-color="#213340"/></linearGradient>
+    <pattern id="grain" width="85" height="75" patternUnits="userSpaceOnUse"><path d="M4 16l13-6 12 12-11 15z M42 47l18-10 15 18-19 12z M36 6l9-4 11 11-13 8z" fill="#7797b0" opacity=".16"/><path d="M6 52l13-7 9 12-16 13z M57 13l17-7 8 14-13 7z" fill="#03090f" opacity=".30"/></pattern>
+    <path id="outline" d="M250 0H800V900H250V230H350V180H250Z M0 20H200V180H100V230H200V900H0Z"/>
+    <filter id="shadow" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1000" height="1120" fill="url(#background)"/>
+  <ellipse cx="500" cy="1050" rx="360" ry="24" fill="#16232c" opacity=".14" filter="url(#shadow)"/>
+  <path d="M85 975H915L945 1040H55Z" fill="#253643" stroke="#788a96" stroke-width="3"/>
+  <path d="M55 1040H945V1060H55Z" fill="#13222e"/>
+  <g transform="translate(100 75)">
+    <use href="#outline" fill="url(#stone)" stroke="#718896" stroke-width="3"/>
+    <use href="#outline" fill="url(#grain)"/>
+    <g fill="#d2d8dd" font-family="Georgia,serif" text-anchor="middle">
+      <text x="552" y="345" font-size="44">Rodina</text>
+      <text x="552" y="410" font-size="56">Novákova</text>
+    </g>
+  </g>
+</svg>
