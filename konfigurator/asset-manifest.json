@@ -1,0 +1,406 @@
+[
+  {
+    "path": "fonts/byron-rr-medium.ttf",
+    "sha256": "ed756bdbcad28901cd3d5a9587f48d5d8658b2c7cbae9d6e9bfac026ca95629d",
+    "source": "https://www.stonia.cz/konfigurator/fonts/byron-rr-medium.ttf"
+  },
+  {
+    "path": "fonts/snell-roundhand-regular.otf",
+    "sha256": "b9a6a97d7dcefddd0b749834e56d0c881afe57416fe0663ec2640a8e4e5e7baf",
+    "source": "https://www.stonia.cz/konfigurator/fonts/snell-roundhand-regular.otf"
+  },
+  {
+    "path": "fonts/kokila-regular.ttf",
+    "sha256": "cc2582726934814c8395663348ff081b5ba3f1698bc1c7e5d98780ada3371010",
+    "source": "https://www.stonia.cz/konfigurator/fonts/kokila-regular.ttf"
+  },
+  {
+    "path": "textures/beton.jpg",
+    "sha256": "56d68de3571031c30d87500076531f492abfad1955bb75d7f5811a5e8ae89ee6",
+    "source": "https://www.stonia.cz/konfigurator/textures/beton.jpg"
+  },
+  {
+    "path": "textures/Bianco Tarn .jpg",
+    "sha256": "0924f338f317455c5987c046e13f32c6f9be5e86466bb43a27c9e7eebcbeff80",
+    "source": "https://www.stonia.cz/konfigurator/textures/Bianco%20Tarn%20.jpg"
+  },
+  {
+    "path": "textures/Impala Nero.jpg",
+    "sha256": "b222ed4f8644459acba4ef9a8cebd32a9b297b07933a9fe54d38b8b1a5537de0",
+    "source": "https://www.stonia.cz/konfigurator/textures/Impala%20Nero.jpg"
+  },
+  {
+    "path": "assets/rose-engraving-white.png",
+    "sha256": "aec3572be1e7ee8872e89c3a49d7bcaeeb40c4d23e37e3e1a8150eb4b53d6050",
+    "source": "https://www.stonia.cz/konfigurator/assets/rose-engraving-white.png"
+  },
+  {
+    "path": "textures/Nero Assoluto.jpg",
+    "sha256": "4341bb6971459271ae1cc17e56bb0bd47bee91ca2eec05aea4817462246415bf",
+    "source": "https://www.stonia.cz/konfigurator/textures/Nero%20Assoluto.jpg"
+  },
+  {
+    "path": "textures/Bianco Sardo.jpg",
+    "sha256": "32dc8104c3971b55ae0fb379dede6a514941cbefafada370d6f115ae252e47a3",
+    "source": "https://www.stonia.cz/konfigurator/textures/Bianco%20Sardo.jpg"
+  },
+  {
+    "path": "textures/Vizag Blue.jpg",
+    "sha256": "7beeef719cb69fabf969fe93db55d263e414ae4b99e7ccda2d6609093f1c8e01",
+    "source": "https://www.stonia.cz/konfigurator/textures/Vizag%20Blue.jpg"
+  },
+  {
+    "path": "textures/Aurora.jpg",
+    "sha256": "a9b1dc2c22bbbe13f5ebfd926fdb73814853a96e748cb5e6356c704d4ab384a7",
+    "source": "https://www.stonia.cz/konfigurator/textures/Aurora.jpg"
+  },
+  {
+    "path": "textures/Verde Olive.jpg",
+    "sha256": "e5e307eee2726f241306bb95fe63ebc2debc451c5027f0330164d0177770f11b",
+    "source": "https://www.stonia.cz/konfigurator/textures/Verde%20Olive.jpg"
+  },
+  {
+    "path": "textures/Rosa Beta.jpg",
+    "sha256": "ad087e27f8785d1fd8b94aed47466a8da03a857eba1fd6285f74b26d95aabecb",
+    "source": "https://www.stonia.cz/konfigurator/textures/Rosa%20Beta.jpg"
+  },
+  {
+    "path": "textures/Paradiso Classic.jpg",
+    "sha256": "1ce3f1e9ddde1d04911d2e0a4baa52b8f34c3ced1fd8b948005a25a7a3f832c7",
+    "source": "https://www.stonia.cz/konfigurator/textures/Paradiso%20Classic.jpg"
+  },
+  {
+    "path": "textures/Shivakashi.jpg",
+    "sha256": "7f0c2a434c0c8d897e628c0a647b49ec20aac981e34b0593321829c6d5c8d0da",
+    "source": "https://www.stonia.cz/konfigurator/textures/Shivakashi.jpg"
+  },
+  {
+    "path": "textures/Rosso Africa.jpg",
+    "sha256": "62858d84d228e4bdc6f8dc9760401067e0f3dbff9d66422b18620cda9f5c45cd",
+    "source": "https://www.stonia.cz/konfigurator/textures/Rosso%20Africa.jpg"
+  },
+  {
+    "path": "textures/Multicolor Red.jpg",
+    "sha256": "a3b417803e88ecf468358d725b3a9f0eb28a07431fdd1b7712ce9f22aca92a9d",
+    "source": "https://www.stonia.cz/konfigurator/textures/Multicolor%20Red.jpg"
+  },
+  {
+    "path": "textures/labrador-blue-pearl-studio-blue-20261003.jpg",
+    "sha256": "adc73d20010c6dcf5f6b6d13e6fc6069a2efe0846841d8238c4574f057bdfd11",
+    "source": "https://www.stonia.cz/konfigurator/textures/labrador-blue-pearl-studio-blue-20261003.jpg"
+  },
+  {
+    "path": "textures/Viscont White.jpg",
+    "sha256": "083bb2ee2125a2e9c2dcc466e90fda177f9c34e13718a8d48df6aa70c591ba4a",
+    "source": "https://www.stonia.cz/konfigurator/textures/Viscont%20White.jpg"
+  },
+  {
+    "path": "Tvary/thumbs/deleny-kriz.svg",
+    "sha256": "cf7c163df305307cb1cdc73c5c9612b13c2949cb390e7d61edec5c8205d55f16",
+    "source": "https://www.stonia.cz/konfigurator/Tvary/thumbs/deleny-kriz.svg"
+  },
+  {
+    "path": "Tvary/thumbs/srdce-strom.svg",
+    "sha256": "6da737340dbecd573b8d8c1645821de29e2908b19230b548e164d5d79437f518",
+    "source": "https://www.stonia.cz/konfigurator/Tvary/thumbs/srdce-strom.svg"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-04.jpg",
+    "sha256": "f90788b490d5d5719703f4f2d11defc4870b602ff2d2f70ffb2773433a7ec44b",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-04.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "c86a825d6168bbddd600b8ae553c100b9d9b1cd2a8777b26e08979940bd31bc2",
+    "shape": "atyp-04"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-02.jpg",
+    "sha256": "ff8767c496f42954b50f9c79fdad7bd4f50b366a13509ed7989abe26a9c0b3fe",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-02.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "1069d86d21293576e37fee9e9401a845840d9656fe81293fe7c7a5feb22b375e",
+    "shape": "atyp-02"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-05.jpg",
+    "sha256": "0bb14771a8e006ae7c7120ff75fea36f78eef8907c0951b4e3f78cb3f454cd09",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-05.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "74baed1a9a55f9d7299f9d01c3ca8d548d565896cf7553c9da447eade8e71d79",
+    "shape": "atyp-05"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-09.jpg",
+    "sha256": "066c08d87e87f2c166f7d6d01541a82c25bd2b63e7ac4401105cd42ed7af84c5",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-09.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "43bb1e40b16cb1d46a595feb2f49655645c68e4e852f0c26615b492d6dcd9ac0",
+    "shape": "atyp-09"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-08.jpg",
+    "sha256": "70a2445133f99aedf5af71fde604137af59b9089e1a2bdc31d245399d7a2c2ba",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-08.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "f8009f0809e2b9bc2f9ab53c6254233e60c0f457ec13cf1caf30127799d29cee",
+    "shape": "atyp-08"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-10.jpg",
+    "sha256": "b0ab94e473e5661026819543a8dd8b3a03391849ae1e43b4b0f0dc928bc064d5",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-10.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "45ad5ace0776a370c5c2e08596e27635e35a395a559005bd26bc0fac2f9dcf8a",
+    "shape": "atyp-10"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-12.jpg",
+    "sha256": "948b0fad995bac7dd32983cd60b3c23d6ceb42b569b0c62a84097047de967746",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-12.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "4401b2ff54bb8638f505fbb59ddd07b8194816ef53558fdc4146b6e7a7619299",
+    "shape": "atyp-12"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-13.jpg",
+    "sha256": "3894074543586d3a7b39be44dcbdf8ebf8c0da604117df5acf4d37eacf452a21",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-13.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "8cd1a36b85387f8fd01580f4298217009ff867a12a8f5c57e794c33a5457e8e6",
+    "shape": "atyp-13"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-15.jpg",
+    "sha256": "0819b2f831e13fbbf74dcddda0bb8a26c1d2bc0575be345dc2fcc9a95a575a37",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-15.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "652f2dc9c880d8a13bf6a8369445183c2e0e4fb7e23c3f722fb79958d3d23ffb",
+    "shape": "atyp-15"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-14.jpg",
+    "sha256": "7a6b19ff73555b12026944088992cbd9644900d458bcb51e2ea7efd557f56cdb",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-14.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "4de4f78b022ff35d740721763d9c9c37ac3c23c6d7adcdbe2f8322fbd26f9a8c",
+    "shape": "atyp-14"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-16.jpg",
+    "sha256": "181ac9956c4e6bb72ff700de05501c59efcfb4f010bf06ab5aeef5e43a57e5e6",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-16.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "31b9cb6de1a891c19ec45f2635e85a004f360b727f142a9561601f6322fdcefc",
+    "shape": "atyp-16"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-17.jpg",
+    "sha256": "81b8baba7e66f6e45b8423aff8d88e78e40933aa63c549a39a7d7a33de10820c",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-17.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "a723b99cad12458096bfc12382ae5e81750a3ea74fd7102519a91590b3aa1a56",
+    "shape": "atyp-17"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-23.jpg",
+    "sha256": "f44a1df84ae6915db30b5e2f02be87f335d9393afe7b367cfb28a98ab91fbc3b",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-23.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "f1530d3933e89986082848956758fe0e1482183999beacfe4218b4252c279301",
+    "shape": "atyp-23"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-18.jpg",
+    "sha256": "364ac06366de896ea7defe961807936d4488856a53e12f121796bdfc509dea78",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-18.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "dd52fdc6e0cf61b4a9570683928fbbd0094a49860f379849a4a1d26428b33a5b",
+    "shape": "atyp-18"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-19.jpg",
+    "sha256": "1bb56c51329eefa0cbf399787f139d0dc63ee4586864b169fb285a286638a5fa",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-19.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "76b71dd3c4374a7c5897708adcddce225a59bb2cc403d4ad1202a7da9df66183",
+    "shape": "atyp-19"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-27.jpg",
+    "sha256": "4516a8422575c7847503104904eea477bb050cf6a9cb64f21b31149df3c77c45",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-27.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "13d3e96e0dde44ff782c18f61242c415a88b9429052c2b23d13abcf9f1380683",
+    "shape": "atyp-27"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-32.jpg",
+    "sha256": "177992dac354500e461ea4f87a48a1920bbad2e3a93358ae5fdeaba554191609",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-32.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "5f3c2ac2d691ba5a46588a42a65d04b29e9988ec9e5e395598985496093b488c",
+    "shape": "atyp-32"
+  },
+  {
+    "path": "Tvary/thumbs/tvar-28.jpg",
+    "sha256": "1ad386df90e41e53927346d44d82fe03ffc343d90f3f5efdf15b37fe7593a8de",
+    "referenceSource": "https://www.stonia.cz/konfigurator/Tvary/thumbs/tvar-28.jpg",
+    "source": "generated:original-headstone-geometry-and-engraving",
+    "referenceSha256": "2c46c07261fb4f18ac1931325550967c42947a34fac47c924b28f6403785e257",
+    "shape": "atyp-28"
+  },
+  {
+    "path": "assets/atyp-02-rytina-white.png",
+    "sha256": "e11c92a9564b0bea430268063dc0fd6b687f9308dcb644af701e6c9068bafad0",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-02-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-04-rytina-white.png",
+    "sha256": "42ec38eab11d6bb5d813c0d740c6af004ee2df261b125d88a61f657d687b7e96",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-04-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-05-rytina-mr5e4ibg.png",
+    "sha256": "d4ceeb5ca8d9c05f6cf6ef2ba3f6bcd50834a4010693374284db5e89ced11962",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-05-rytina-mr5e4ibg.png"
+  },
+  {
+    "path": "assets/atyp-08-rytina-white.png",
+    "sha256": "24c5adeb2abad19511e5a8620bc2ab87208776419cddbc0f87e62b3c8b3d15ee",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-08-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-10-rytina-mr5ejvye.png",
+    "sha256": "f1eeb68509843e7590c6253f2e38e31c187e465512b7cb0b70d2f14b87dbcaea",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-10-rytina-mr5ejvye.png"
+  },
+  {
+    "path": "assets/atyp-12-rytina-mr5embpv.png",
+    "sha256": "f6b02ba8f653f7a328e9ad85f9d4e4645baa8869b2f2ff3dfb6effd18cef9a44",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-12-rytina-mr5embpv.png"
+  },
+  {
+    "path": "assets/atyp-13-rytina-mr5esp3y.png",
+    "sha256": "bc1901898dd89290e92b2c5b7f3ab2684da8ba5fc015974bbf1688058c4fd931",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-13-rytina-mr5esp3y.png"
+  },
+  {
+    "path": "assets/atyp-14-rytina-mr5eu84n.png",
+    "sha256": "47d336187961aef897fcf81b2963d1b049ad9c5f449f754025160ee4e77e4014",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-14-rytina-mr5eu84n.png"
+  },
+  {
+    "path": "assets/atyp-15-rytina-white.png",
+    "sha256": "b245c6e78671b053229a58cf9b35947b333651cd3dbd7e1cfd09e04464823776",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-15-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-16-rytina-mr5exkyi.png",
+    "sha256": "b80bc884a46cd13f1fb743b02b2dd94168595d6cfc44ab0bbc727abd5e28bc8c",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-16-rytina-mr5exkyi.png"
+  },
+  {
+    "path": "assets/atyp-17-rytina-mr5f127u.png",
+    "sha256": "679d7cdd387e74d38658625e14c1e86896f9d6c623837bad9bda721abccf4319",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-17-rytina-mr5f127u.png"
+  },
+  {
+    "path": "assets/atyp-18-rytina-white.png",
+    "sha256": "8fb97fad543d0c0c768b68643211dc74ef97ea4529898d18b9e304c1c2c3ed50",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-18-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-19-rytina-white.png",
+    "sha256": "aa736964ab968df7ed0c4c09d2de5c9b8d3fd123faa2b3c49da9d8365c3c5191",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-19-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-23-rytina-mr5f5hpz.png",
+    "sha256": "4408d7b24dbd976292edc8bd26621e7b249cfedae32130fb0745944901472597",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-23-rytina-mr5f5hpz.png"
+  },
+  {
+    "path": "assets/atyp-28-rytina-white.png",
+    "sha256": "61cc0b920e80ce4f52e09aef6931382b517e9bd46022e4962a2e73c8e23c91ec",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-28-rytina-white.png"
+  },
+  {
+    "path": "assets/atyp-32-rytina-white.png",
+    "sha256": "574b0bbc117aeba0594c1d4fbf9d68214995d709ea6bac44dcce6b71f785d455",
+    "source": "https://www.stonia.cz/konfigurator/assets/atyp-32-rytina-white.png"
+  },
+  {
+    "path": "assets/svitek-rytina-mr5ehc7j.png",
+    "sha256": "b1bbc00624788fa8d085d02adbf49797fee490a62d0bdc9cedf1c10a1d5c956e",
+    "source": "https://www.stonia.cz/konfigurator/assets/svitek-rytina-mr5ehc7j.png"
+  },
+  {
+    "path": "models/DH_1napisovka_presah_predlozka.glb",
+    "sha256": "63e889f8c8a736381a54b906d0396819e06c859e0afafaed0519df537d2c9aae",
+    "source": "https://www.stonia.cz/konfigurator/models/DH_1napisovka_presah_predlozka.glb"
+  },
+  {
+    "path": "models/DH_1napisovka_presah_predlozka_odskok.glb",
+    "sha256": "30e05a22c2bd16f9b60e2e1dfcfab27dc7e0fa4d188e2415d92089b0a81638a2",
+    "source": "https://www.stonia.cz/konfigurator/models/DH_1napisovka_presah_predlozka_odskok.glb"
+  },
+  {
+    "path": "models/DH_napisovka_sokl_predlozka_odskok.glb",
+    "sha256": "9c51d9ed28cbbc03ac6eaaa9c345711617417a5d7ab2c2fcb85ea99ee5b82638",
+    "source": "https://www.stonia.cz/konfigurator/models/DH_napisovka_sokl_predlozka_odskok.glb"
+  },
+  {
+    "path": "models/DH_napisovka_sokl_predlozka_presah.glb",
+    "sha256": "50461d563f70088b44b4895b8e1241c04809048000deee48904e00afdeb79296",
+    "source": "https://www.stonia.cz/konfigurator/models/DH_napisovka_sokl_predlozka_presah.glb"
+  },
+  {
+    "path": "models/JH_podlozka_deska.glb",
+    "sha256": "3c9f079e93999d0bebf48a63416e0d9c4279c14914406c3a11ded5332f79b3ec",
+    "source": "https://www.stonia.cz/konfigurator/models/JH_podlozka_deska.glb"
+  },
+  {
+    "path": "models/JH_podlozka_deska_odskok.glb",
+    "sha256": "950ac60e71d31ac6c29ee0206c3ffafe358cd6cb5f9af9a0a7c02b0d2f2f2e95",
+    "source": "https://www.stonia.cz/konfigurator/models/JH_podlozka_deska_odskok.glb"
+  },
+  {
+    "path": "models/JH_sokl.glb",
+    "sha256": "8942013b8f8548692f9b549e489ece85b980e1b3e46e18e6344c9c1d6645a9f0",
+    "source": "https://www.stonia.cz/konfigurator/models/JH_sokl.glb"
+  },
+  {
+    "path": "models/JH_sokl_odskok.glb",
+    "sha256": "65f31e9938258c472c3f96a189a1dea2ccb3e63c9559254f8085736ad062ef20",
+    "source": "https://www.stonia.cz/konfigurator/models/JH_sokl_odskok.glb"
+  },
+  {
+    "path": "models/UP_krycideska_podlozka.glb",
+    "sha256": "392d44342ce3eab84580afe8f245ac5287cb2181a2349731813b0a6347f1fcf8",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_krycideska_podlozka.glb"
+  },
+  {
+    "path": "models/UP_odskok.glb",
+    "sha256": "a9160aa8036e0ad722ef9443764194ababa1fb7ea7ccaf901e6d6b03c9016c74",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_odskok.glb"
+  },
+  {
+    "path": "models/UP_odskok_bezsoklu.glb",
+    "sha256": "6aae46193de1b0a4d84a134fb5a38ec6420db18808c172493cceb11fc6a55b46",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_odskok_bezsoklu.glb"
+  },
+  {
+    "path": "models/UP_podlozka_hlina.glb",
+    "sha256": "8e98c6156c9e22de76c3949744e366f5d60afbb54a8f0d1219a6cd8a1bf8a83f",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_podlozka_hlina.glb"
+  },
+  {
+    "path": "models/UP_sokl_okno_deska.glb",
+    "sha256": "e06e6517feb2f30b7bb0fceb2ab17c06721d5bddae0f297bab44ed2a913a4176",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_sokl_okno_deska.glb"
+  },
+  {
+    "path": "models/UP_sokl_okno_hlina.glb",
+    "sha256": "3b0b428d9958bfa9ebe7a00e4d12d8075f0a30c3e3ea2d17055d20f13753cd14",
+    "source": "https://www.stonia.cz/konfigurator/models/UP_sokl_okno_hlina.glb"
+  }
+]

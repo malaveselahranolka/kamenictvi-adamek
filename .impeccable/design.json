@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T12:00:00.000Z",
+  "title": "Design System: Kamenictví Adámek — konfigurátor",
+  "extensions": {
+    "colorMeta": {
+      "forest": { "role": "neutral", "displayName": "Zelená dílny", "canonical": "#1d2620", "tonalRamp": ["#07100b", "#111a14", "#1d2620", "#303a33", "#465149", "#606a63", "#7f8881", "#a4aaa5"] },
+      "forest-surface": { "role": "neutral", "displayName": "Zelená plocha", "canonical": "#243029", "tonalRamp": ["#0d1710", "#18221b", "#243029", "#374139", "#4e5850", "#697169", "#878e88", "#a9aea9"] },
+      "forest-raised": { "role": "neutral", "displayName": "Zvýšená zelená", "canonical": "#26342c", "tonalRamp": ["#0f1a12", "#1a251d", "#26342c", "#39463e", "#515c54", "#6c756e", "#8a928c", "#abb0ac"] },
+      "forest-line": { "role": "neutral", "displayName": "Linka kamene", "canonical": "#435047", "tonalRamp": ["#1b261f", "#2e3932", "#435047", "#58645b", "#707b73", "#89928b", "#a4aba5", "#bec3bf"] },
+      "stone-text": { "role": "neutral", "displayName": "Slonovinový text", "canonical": "#ece9e2", "tonalRamp": ["#27241e", "#45423b", "#625f58", "#817e77", "#a19e97", "#c2bfb8", "#dedbd4", "#f3f0e9"] },
+      "muted-text": { "role": "neutral", "displayName": "Tlumený text", "canonical": "#b3b0a6", "tonalRamp": ["#1b1912", "#38362f", "#55534b", "#747269", "#949187", "#b3b0a6", "#cfccc2", "#e8e5db"] },
+      "gold": { "role": "primary", "displayName": "Zlato dílny", "canonical": "#e2a64a", "tonalRamp": ["#281600", "#472800", "#68400a", "#89591c", "#aa7330", "#c98e3d", "#e2a64a", "#f4c477"] },
+      "gold-hover": { "role": "primary", "displayName": "Zlato ve světle", "canonical": "#ecb968", "tonalRamp": ["#2c1a03", "#4c300a", "#6d4716", "#8e6028", "#ae793c", "#cc9653", "#e4ad63", "#f5cc91"] },
+      "ivory": { "role": "neutral", "displayName": "Slonovinový vzorek", "canonical": "#ece9e2", "tonalRamp": ["#27241e", "#45423b", "#625f58", "#817e77", "#a19e97", "#c2bfb8", "#dedbd4", "#f3f0e9"] },
+      "selected-ivory": { "role": "neutral", "displayName": "Zvolená slonovinová", "canonical": "#fff4dc", "tonalRamp": ["#2b1e04", "#4c3810", "#6e5420", "#8e7132", "#ae8d48", "#ccaa63", "#e6c987", "#f8e7c0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Caslon display", "purpose": "Hlavní titulky kroků a pojmenované volby." },
+      "body": { "displayName": "Albert Sans", "purpose": "Popisy, ovládání a navigace." },
+      "label": { "displayName": "Albert Sans labels", "purpose": "Krátké popisky a ovládací štítky." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "camera-view", "value": "<=280ms; immediate when prefers-reduced-motion: reduce", "purpose": "Přechod kamery má prostorovou návaznost; výběry UI zůstávají okamžité." }
+    ],
+    "breakpoints": [
+      { "name": "tablet-wide", "value": "1200px", "purpose": "Panel drží 390px do desktopové šířky." },
+      { "name": "mobile", "value": "900px", "purpose": "Přechod do jediného sloupce a pořadí kroků, náhledu a ovládání." },
+      { "name": "small-mobile", "value": "360px", "purpose": "Zmenšení loga, rozestupů hlavičky a horního CTA." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hlavní navigační a kontaktní akce.",
+      "html": "<button class=\"ds-btn-primary\">Pokračovat</button>",
+      "css": ".ds-btn-primary { min-height: 48px; padding: 0 16px; border: 0; border-radius: 3px; background: #e2a64a; color: #1d2620; font: 600 14px/1.2 'Albert Sans', system-ui, sans-serif; } .ds-btn-primary:hover { background: #ecb968; } .ds-btn-primary:focus-visible { outline: 2px solid #e2a64a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "description": "Doplňková akce v tmavém panelu.",
+      "html": "<button class=\"ds-btn-secondary\">Zpět</button>",
+      "css": ".ds-btn-secondary { min-height: 48px; padding: 0 16px; border: 1px solid #435047; border-radius: 3px; background: #26342c; color: #ece9e2; font: 500 14px/1.2 'Albert Sans', system-ui, sans-serif; } .ds-btn-secondary:focus-visible { outline: 2px solid #e2a64a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Choice row",
+      "kind": "custom",
+      "description": "Otevřená volba místa oddělená linkou.",
+      "html": "<button class=\"ds-choice-row\"><strong>Jednohrob</strong><span>Rozměry upravíme při zaměření</span></button>",
+      "css": ".ds-choice-row { display: grid; grid-template-columns: 72px minmax(0,1fr) 18px; gap: 16px; width: 100%; padding: 16px 0; border: 0; border-bottom: 1px solid #435047; border-radius: 0; background: transparent; color: #ece9e2; text-align: left; font-family: 'Albert Sans', system-ui, sans-serif; } .ds-choice-row:hover, .ds-choice-row[aria-pressed=\"true\"] { background: #2b382e; }"
+    },
+    {
+      "name": "Shape sample",
+      "kind": "card",
+      "refersTo": "shape-sample",
+      "description": "Světlý katalogový náhled siluety kamene.",
+      "html": "<button class=\"ds-shape-sample\"><span aria-hidden=\"true\"></span><strong>Klasický</strong></button>",
+      "css": ".ds-shape-sample { padding: 16px 10px 12px; border: 1px solid transparent; border-radius: 2px; background: #ece9e2; color: #1d2620; font: 500 13px/1.3 'Albert Sans', system-ui, sans-serif; } .ds-shape-sample[aria-pressed=\"true\"] { border-color: #e2a64a; background: #fff4dc; box-shadow: inset 0 -2px #e2a64a; }"
+    },
+    {
+      "name": "Step navigation",
+      "kind": "nav",
+      "description": "Šest vodorovných kroků na desktopu, pořadí se na mobilu zachová.",
+      "html": "<nav class=\"ds-steps\"><button>01 <span>Místo</span></button><button aria-current=\"step\">02 <span>Podoba</span></button></nav>",
+      "css": ".ds-steps { display: flex; width: 100%; } .ds-steps button { flex: 1; min-height: 64px; padding: 0 20px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #b3b0a6; font: 500 15px/1.2 'Albert Sans', system-ui, sans-serif; font-variant-numeric: tabular-nums; } .ds-steps button[aria-current=\"step\"] { border-bottom-color: #e2a64a; color: #e2a64a; }"
+    },
+    {
+      "name": "Studio panel",
+      "kind": "custom",
+      "description": "Tmavý ovládací panel vedle světlého 3D náhledu.",
+      "html": "<section class=\"ds-studio-panel\"><h1>Vzpomínka v kameni.</h1><p>Vyberte místo, které máte k dispozici.</p></section>",
+      "css": ".ds-studio-panel { padding: 28px; border-right: 1px solid #435047; background: #243029; color: #ece9e2; } .ds-studio-panel h1 { margin: 0; font: 400 42px/1.05 'Libre Caslon Display', Georgia, serif; letter-spacing: -.025em; } .ds-studio-panel p { font: 400 15px/1.6 'Albert Sans', system-ui, sans-serif; color: #d1cec5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ateliér vzpomínek v kameni",
+    "overview": "Rozhraní spojuje tmavou zelenou dílnu s klidným, světlým prostorem skutečného kamenného návrhu. Zlatá označuje právě zvolenou cestu a hlavní akci; slonovinová nechává vyniknout siluetu, kresbu kamene a rozměry. Výrazný patkový nadpis dodá lidský tón, zatímco přehledné ovládání zůstává věcné a dobře čitelné. Na široké obrazovce tvoří celek levý ovládací panel a dominantní 3D náhled vpravo. Šest kroků leží vodorovně pod hlavičkou. Na telefonu jdou kroky před náhledem a ovládáním; informace o cenové nabídce a navigace zůstávají ve spodní liště. Vizuální systém slouží návrhu pomníku, ne další marketingové vrstvě.",
+    "keyCharacteristics": [
+      "Tmavá dílna, světlý kámen, střídmý zlatý akcent.",
+      "Výrazné patkové nadpisy a přístupné bezpatkové ovládání.",
+      "Přesný katalog a prostorový náhled mají přednost před dekorací."
+    ],
+    "rules": [
+      { "section": "Colors", "name": "Zlatého vodítka", "body": "Zlato vyhraď aktivnímu výběru, fokusu a hlavním akcím; nepoužívej je jako plošnou dekoraci." },
+      { "section": "Typography", "name": "Dvou Hlasů", "body": "Caslon vyhraď nadpisům a pojmenovaným volbám; veškeré ovládání sázej Albert Sans. Písma určená pro skutečné rytiny zůstávají samostatnou volbou v konfigurátoru." },
+      { "section": "Layout", "name": "Modelu Na Dosah", "body": "Model zůstává hlavní vizuální plochou; mobilní pořadí však nejdřív ukáže postup, pak náhled a nakonec podrobné volby." }
+    ],
+    "dos": [
+      "Do používej zelenou dílny pro rozhraní, slonovinovou pro kámen a zlato pro zvolený stav a hlavní akci.",
+      "Do zachovej rozlišení mezi Caslonem pro titulky, Albert Sans pro UI a samostatnými písmy pro rytinu.",
+      "Do udržuj volby místa jako přehledné řádky a náhled jako hlavní prostorovou plochu."
+    ],
+    "donts": [
+      "Don't nepřenášej velké oblé karty ani stíny původní šablony do ateliérového ovládání.",
+      "Don't neměň geometrii katalogu ani písma skutečných rytin jako součást vizuálního sjednocení.",
+      "Don't nepoužívej slonovinovou scénu náhledu jako důvod k zesvětlení ovládacího panelu."
+    ]
+  }
+}

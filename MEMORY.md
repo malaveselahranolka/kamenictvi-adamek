@@ -1,0 +1,2 @@
+- [E-mailová služba konfigurátoru](memory/emailova-sluzba.md) — volba a připojení služby zatím nedodané uživatelem.
+- [Vlastní rozhraní konfigurátoru](memory/vlastni-rozhrani.md) — věrný katalog, vlastní kompozice; první pouhý rebrand uživatel odmítl.
