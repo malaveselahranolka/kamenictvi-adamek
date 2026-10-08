@@ -7,176 +7,565 @@
   <meta name="description" content="Ukázky naší práce — pomníky, kuchyně, krby, dlažby a bytové doplňky z přírodního kamene. Rodinná firma s 30+ let tradicí, Jeseník, Mikulovice, Jesenicko.">
   <meta name="keywords" content="reference kamenictví, pomníky Jeseník, pomníky Jesenicko, pomníky Mikulovice, náhrobky Jeseník, kuchyňské desky, krby, schody, dlažby, kamenictví Jeseník, kamenictví Mikulovice">
   <link rel="canonical" href="https://kamenictvi-adamek.cz/reference.html">
+  <meta name="theme-color" content="#f6f6f3">
+
+  <!-- Preload písma -->
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Favicon -->
   <link rel="icon" href="img/adamek-favicon-light.svg" type="image/svg+xml">
   <link rel="icon" href="img/adamek-favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Reference — Kamenictví Adámek">
   <meta property="og:description" content="Ukázky naší práce — pomníky, kuchyně, krby, schody a dlažby z přírodního kamene. 30+ let tradice.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kamenictvi-adamek.cz/reference.html">
   <meta property="og:image" content="https://kamenictvi-adamek.cz/img/pomniky/IMG_1034.JPEG">
   <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Kamenictví Adámek">
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigace -->
-  <header class="header header--scrolled header--with-nav" id="header">
+  <div id="top-sentinel" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;"></div>
+  <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
+
+  <!-- Header -->
+  <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">
-        <img src="img/adamek-logo-light.svg" class="logo__img" alt="Kamenictví Adámek">
+      <a href="index.html" class="header__logo" aria-label="Kamenictví Adámek, úvod">
+        <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
       </a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link">Úvod</a>
-        <a href="reference.html" class="nav__link nav__link--active">Reference</a>
-        <a href="cenik.html" class="nav__link">Ceník</a>
-        <a href="kontakt.html" class="nav__link">Kontakt</a>
+      <nav class="header__nav" aria-label="Hlavní navigace">
+        <a href="reference.html" class="header__nav-link" aria-current="page">Reference</a>
+        <a href="cenik.html" class="header__nav-link">Ceník</a>
+        <a href="kontakt.html" class="header__nav-link">Kontakt</a>
+        <a href="tel:+420602277869" class="btn btn--primary btn--sm">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+          <span>602 277 869</span>
+        </a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- Sekční navigace -->
-    <nav class="section-nav section-nav--ref" id="section-nav-ref">
-      <div class="container">
-        <div class="section-nav__inner">
-          <a href="#pomniky" class="section-nav__link" data-section="pomniky">Pomníky</a>
-          <a href="#schody" class="section-nav__link" data-section="schody">Schody a dlažby</a>
-          <a href="#kuchyne-krby" class="section-nav__link" data-section="kuchyne-krby">Kuchyně a krby</a>
-          <a href="#doplnky" class="section-nav__link" data-section="doplnky">Bytové doplňky</a>
-          <a href="#ostatni" class="section-nav__link" data-section="ostatni">Ostatní</a>
-        </div>
+      <div class="header__actions-mobile">
+        <a href="tel:+420602277869" class="btn btn--icon header__phone-mobile" aria-label="Zavolat 602 277 869">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        </a>
+        <button type="button" class="btn btn--icon header__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <svg class="icon-menu" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>
+          <svg class="icon-close" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
       </div>
-    </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="mobile-menu__nav" aria-label="Mobilní navigace">
+        <a href="index.html" class="mobile-menu__link">Úvod</a>
+        <a href="reference.html" class="mobile-menu__link" aria-current="page">Reference</a>
+        <a href="cenik.html" class="mobile-menu__link">Ceník</a>
+        <a href="kontakt.html" class="mobile-menu__link">Kontakt</a>
+      </nav>
+      <a href="tel:+420602277869" class="btn btn--primary">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        <span>Zavolat 602 277 869</span>
+      </a>
+    </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hlavní obsah -->
+  <main id="obsah">
     <div class="container">
-      <span class="section-label">Portfolio</span>
-      <h1>Reference</h1>
-      <p>Ukázky naší práce — každý projekt je originál zpracovaný na míru.</p>
+      <!-- Hlavička stránky -->
+      <section class="page-header">
+        <h1>Reference</h1>
+        <p class="lead">Ukázky naší práce. Každý projekt je originál zpracovaný na míru.</p>
+      </section>
+
+      <!-- Filtrační taby -->
+      <div class="tablist" role="tablist" aria-label="Kategorie">
+        <button type="button" role="tab" aria-selected="true" aria-controls="galerie" data-filter="all" class="tab-btn is-active">Vše (36)</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="galerie" data-filter="pomniky" class="tab-btn">Pomníky (23)</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="galerie" data-filter="schody" class="tab-btn">Schody a dlažby (3)</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="galerie" data-filter="kuchyne-krby" class="tab-btn">Kuchyně a krby (4)</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="galerie" data-filter="doplnky" class="tab-btn">Bytové doplňky (2)</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="galerie" data-filter="ostatni" class="tab-btn">Ostatní (4)</button>
+      </div>
+
+      <!-- Galerie referencí -->
+      <div class="gallery-grid" id="galerie">
+        <!-- 1. Pomníky (23) -->
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1033-1600.webp" data-caption="Žulový pomník, jednohrob se světlou deskou" aria-label="Zvětšit fotografii: Žulový pomník, jednohrob se světlou deskou">
+          <span class="media">
+            <img fetchpriority="high" src="img/opt/pomniky/img-1033-480.webp"
+                 srcset="img/opt/pomniky/img-1033-480.webp 480w, img/opt/pomniky/img-1033-720.webp 720w, img/opt/pomniky/img-1033-960.webp 960w, img/opt/pomniky/img-1033-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový pomník, jednohrob se světlou deskou"
+                 loading="eager" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1060-1600.webp" data-caption="Tmavý leštěný žulový pomník se zlatým písmem" aria-label="Zvětšit fotografii: Tmavý leštěný žulový pomník se zlatým písmem">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1060-480.webp"
+                 srcset="img/opt/pomniky/img-1060-480.webp 480w, img/opt/pomniky/img-1060-720.webp 720w, img/opt/pomniky/img-1060-960.webp 960w, img/opt/pomniky/img-1060-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Tmavý leštěný žulový pomník se zlatým písmem"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1064-1600.webp" data-caption="Žulový dvojhrob s vázou a lucernou" aria-label="Zvětšit fotografii: Žulový dvojhrob s vázou a lucernou">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1064-480.webp"
+                 srcset="img/opt/pomniky/img-1064-480.webp 480w, img/opt/pomniky/img-1064-720.webp 720w, img/opt/pomniky/img-1064-960.webp 960w, img/opt/pomniky/img-1064-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový dvojhrob s vázou a lucernou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1034-1600.webp" data-caption="Žulový pomník s ručně rytým reliéfem růže" aria-label="Zvětšit fotografii: Žulový pomník s ručně rytým reliéfem růže">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1034-480.webp"
+                 srcset="img/opt/pomniky/img-1034-480.webp 480w, img/opt/pomniky/img-1034-720.webp 720w, img/opt/pomniky/img-1034-960.webp 960w, img/opt/pomniky/img-1034-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový pomník s ručně rytým reliéfem růže"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1045-1600.webp" data-caption="Kamenný pomník z tmavé žuly" aria-label="Zvětšit fotografii: Kamenný pomník z tmavé žuly">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1045-480.webp"
+                 srcset="img/opt/pomniky/img-1045-480.webp 480w, img/opt/pomniky/img-1045-720.webp 720w, img/opt/pomniky/img-1045-960.webp 960w, img/opt/pomniky/img-1045-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenný pomník z tmavé žuly"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1042-1600.webp" data-caption="Urnový pomník z leštěného přírodního kamene" aria-label="Zvětšit fotografii: Urnový pomník z leštěného přírodního kamene">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1042-480.webp"
+                 srcset="img/opt/pomniky/img-1042-480.webp 480w, img/opt/pomniky/img-1042-720.webp 720w, img/opt/pomniky/img-1042-960.webp 960w, img/opt/pomniky/img-1042-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Urnový pomník z leštěného přírodního kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1054-1600.webp" data-caption="Klasický žulový pomník s kamennou vázou" aria-label="Zvětšit fotografii: Klasický žulový pomník s kamennou vázou">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1054-480.webp"
+                 srcset="img/opt/pomniky/img-1054-480.webp 480w, img/opt/pomniky/img-1054-720.webp 720w, img/opt/pomniky/img-1054-960.webp 960w, img/opt/pomniky/img-1054-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Klasický žulový pomník s kamennou vázou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1026-1600.webp" data-caption="Jednohrob s krycí kamennou deskou" aria-label="Zvětšit fotografii: Jednohrob s krycí kamennou deskou">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1026-480.webp"
+                 srcset="img/opt/pomniky/img-1026-480.webp 480w, img/opt/pomniky/img-1026-720.webp 720w, img/opt/pomniky/img-1026-960.webp 960w, img/opt/pomniky/img-1026-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Jednohrob s krycí kamennou deskou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1027-1600.webp" data-caption="Žulový náhrobek s leštěným nápisem" aria-label="Zvětšit fotografii: Žulový náhrobek s leštěným nápisem">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1027-480.webp"
+                 srcset="img/opt/pomniky/img-1027-480.webp 480w, img/opt/pomniky/img-1027-720.webp 720w, img/opt/pomniky/img-1027-960.webp 960w, img/opt/pomniky/img-1027-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový náhrobek s leštěným nápisem"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1047-1600.webp" data-caption="Pomník z přírodní žuly s podstavcem" aria-label="Zvětšit fotografii: Pomník z přírodní žuly s podstavcem">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1047-480.webp"
+                 srcset="img/opt/pomniky/img-1047-480.webp 480w, img/opt/pomniky/img-1047-720.webp 720w, img/opt/pomniky/img-1047-960.webp 960w, img/opt/pomniky/img-1047-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Pomník z přírodní žuly s podstavcem"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1050-1600.webp" data-caption="Pomník, ukázka kamenické realizace" aria-label="Zvětšit fotografii: Pomník, ukázka kamenické realizace">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1050-480.webp"
+                 srcset="img/opt/pomniky/img-1050-480.webp 480w, img/opt/pomniky/img-1050-720.webp 720w, img/opt/pomniky/img-1050-960.webp 960w, img/opt/pomniky/img-1050-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Pomník, ukázka kamenické realizace"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1035-1600.webp" data-caption="Detail zpracování žulového pomníku" aria-label="Zvětšit fotografii: Detail zpracování žulového pomníku">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1035-480.webp"
+                 srcset="img/opt/pomniky/img-1035-480.webp 480w, img/opt/pomniky/img-1035-720.webp 720w, img/opt/pomniky/img-1035-960.webp 960w, img/opt/pomniky/img-1035-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Detail zpracování žulového pomníku"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1043-1600.webp" data-caption="Elegantní žulový dvojhrob" aria-label="Zvětšit fotografii: Elegantní žulový dvojhrob">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1043-480.webp"
+                 srcset="img/opt/pomniky/img-1043-480.webp 480w, img/opt/pomniky/img-1043-720.webp 720w, img/opt/pomniky/img-1043-960.webp 960w, img/opt/pomniky/img-1043-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Elegantní žulový dvojhrob"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1044-1600.webp" data-caption="Kamenný pomník s reliéfem kříže" aria-label="Zvětšit fotografii: Kamenný pomník s reliéfem kříže">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1044-480.webp"
+                 srcset="img/opt/pomniky/img-1044-480.webp 480w, img/opt/pomniky/img-1044-720.webp 720w, img/opt/pomniky/img-1044-960.webp 960w, img/opt/pomniky/img-1044-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenný pomník s reliéfem kříže"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1048-1600.webp" data-caption="Urnový pomník s lucernou z leštěné žuly" aria-label="Zvětšit fotografii: Urnový pomník s lucernou z leštěné žuly">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1048-480.webp"
+                 srcset="img/opt/pomniky/img-1048-480.webp 480w, img/opt/pomniky/img-1048-720.webp 720w, img/opt/pomniky/img-1048-960.webp 960w, img/opt/pomniky/img-1048-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Urnový pomník s lucernou z leštěné žuly"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1049-1600.webp" data-caption="Pomník z tmavého leštěného kamene" aria-label="Zvětšit fotografii: Pomník z tmavého leštěného kamene">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1049-480.webp"
+                 srcset="img/opt/pomniky/img-1049-480.webp 480w, img/opt/pomniky/img-1049-720.webp 720w, img/opt/pomniky/img-1049-960.webp 960w, img/opt/pomniky/img-1049-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Pomník z tmavého leštěného kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1051-1600.webp" data-caption="Žulový pomník, realizace na hřbitově" aria-label="Zvětšit fotografii: Žulový pomník, realizace na hřbitově">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1051-480.webp"
+                 srcset="img/opt/pomniky/img-1051-480.webp 480w, img/opt/pomniky/img-1051-720.webp 720w, img/opt/pomniky/img-1051-960.webp 960w, img/opt/pomniky/img-1051-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový pomník, realizace na hřbitově"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1052-1600.webp" data-caption="Žulový pomník s lucernou a vázou" aria-label="Zvětšit fotografii: Žulový pomník s lucernou a vázou">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1052-480.webp"
+                 srcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový pomník s lucernou a vázou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1053-1600.webp" data-caption="Náhrobek z přírodní žuly s gravírováním" aria-label="Zvětšit fotografii: Náhrobek z přírodní žuly s gravírováním">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1053-480.webp"
+                 srcset="img/opt/pomniky/img-1053-480.webp 480w, img/opt/pomniky/img-1053-720.webp 720w, img/opt/pomniky/img-1053-960.webp 960w, img/opt/pomniky/img-1053-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Náhrobek z přírodní žuly s gravírováním"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1056-1600.webp" data-caption="Kamenný hrob se dvěma stélami" aria-label="Zvětšit fotografii: Kamenný hrob se dvěma stélami">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1056-480.webp"
+                 srcset="img/opt/pomniky/img-1056-480.webp 480w, img/opt/pomniky/img-1056-720.webp 720w, img/opt/pomniky/img-1056-960.webp 960w, img/opt/pomniky/img-1056-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenný hrob se dvěma stélami"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1061-1600.webp" data-caption="Jednohrob s precizně leštěným povrchem" aria-label="Zvětšit fotografii: Jednohrob s precizně leštěným povrchem">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1061-480.webp"
+                 srcset="img/opt/pomniky/img-1061-480.webp 480w, img/opt/pomniky/img-1061-720.webp 720w, img/opt/pomniky/img-1061-960.webp 960w, img/opt/pomniky/img-1061-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Jednohrob s precizně leštěným povrchem"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1277-1600.webp" data-caption="Pomník z červené žuly Balmoral Red" aria-label="Zvětšit fotografii: Pomník z červené žuly Balmoral Red">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1277-480.webp"
+                 srcset="img/opt/pomniky/img-1277-480.webp 480w, img/opt/pomniky/img-1277-720.webp 720w, img/opt/pomniky/img-1277-960.webp 960w, img/opt/pomniky/img-1277-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Pomník z červené žuly Balmoral Red"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="pomniky" data-full="img/opt/pomniky/img-1282-1600.webp" data-caption="Žulový pomník s profilovanými hranami" aria-label="Zvětšit fotografii: Žulový pomník s profilovanými hranami">
+          <span class="media">
+            <img src="img/opt/pomniky/img-1282-480.webp"
+                 srcset="img/opt/pomniky/img-1282-480.webp 480w, img/opt/pomniky/img-1282-720.webp 720w, img/opt/pomniky/img-1282-960.webp 960w, img/opt/pomniky/img-1282-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Žulový pomník s profilovanými hranami"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+
+        <!-- 2. Schody a dlažby (3) -->
+        <button class="gallery-item" type="button" data-cat="schody" data-full="img/opt/schody/img-1086-1600.webp" data-caption="Venkovní kamenné schody s masivním obkladem" aria-label="Zvětšit fotografii: Venkovní kamenné schody s masivním obkladem">
+          <span class="media">
+            <img src="img/opt/schody/img-1086-480.webp"
+                 srcset="img/opt/schody/img-1086-480.webp 480w, img/opt/schody/img-1086-720.webp 720w, img/opt/schody/img-1086-960.webp 960w, img/opt/schody/img-1086-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Venkovní kamenné schody s masivním obkladem"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="schody" data-full="img/opt/schody/img-5986-1600.webp" data-caption="Kamenná venkovní dlažba z přírodního kamene" aria-label="Zvětšit fotografii: Kamenná venkovní dlažba z přírodního kamene">
+          <span class="media">
+            <img src="img/opt/schody/img-5986-480.webp"
+                 srcset="img/opt/schody/img-5986-480.webp 480w, img/opt/schody/img-5986-720.webp 720w, img/opt/schody/img-5986-960.webp 960w, img/opt/schody/img-5986-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenná venkovní dlažba z přírodního kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item gallery-item--tall" type="button" data-cat="schody" data-full="img/opt/schody/schody-3-960.webp" data-caption="Kamenné schodiště u rodinného domu" aria-label="Zvětšit fotografii: Kamenné schodiště u rodinného domu">
+          <span class="media">
+            <img src="img/opt/schody/schody-3-480.webp"
+                 srcset="img/opt/schody/schody-3-480.webp 480w, img/opt/schody/schody-3-720.webp 720w, img/opt/schody/schody-3-960.webp 960w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1536" height="2048"
+                 alt="Kamenné schodiště u rodinného domu"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+
+        <!-- 3. Kuchyně a krby (4) -->
+        <button class="gallery-item" type="button" data-cat="kuchyne-krby" data-full="img/opt/kuchyne-krby/img-1068-1600.webp" data-caption="Kuchyňská pracovní deska z leštěné žuly" aria-label="Zvětšit fotografii: Kuchyňská pracovní deska z leštěné žuly">
+          <span class="media">
+            <img src="img/opt/kuchyne-krby/img-1068-480.webp"
+                 srcset="img/opt/kuchyne-krby/img-1068-480.webp 480w, img/opt/kuchyne-krby/img-1068-720.webp 720w, img/opt/kuchyne-krby/img-1068-960.webp 960w, img/opt/kuchyne-krby/img-1068-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kuchyňská pracovní deska z leštěné žuly"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="kuchyne-krby" data-full="img/opt/kuchyne-krby/img-1071-1600.webp" data-caption="Kuchyňský ostrůvek s masivní kamennou deskou" aria-label="Zvětšit fotografii: Kuchyňský ostrůvek s masivní kamennou deskou">
+          <span class="media">
+            <img src="img/opt/kuchyne-krby/img-1071-480.webp"
+                 srcset="img/opt/kuchyne-krby/img-1071-480.webp 480w, img/opt/kuchyne-krby/img-1071-720.webp 720w, img/opt/kuchyne-krby/img-1071-960.webp 960w, img/opt/kuchyne-krby/img-1071-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kuchyňský ostrůvek s masivní kamennou deskou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="kuchyne-krby" data-full="img/opt/kuchyne-krby/img-1081-1600.webp" data-caption="Krb s obkladem z přírodního kamene" aria-label="Zvětšit fotografii: Krb s obkladem z přírodního kamene">
+          <span class="media">
+            <img src="img/opt/kuchyne-krby/img-1081-480.webp"
+                 srcset="img/opt/kuchyne-krby/img-1081-480.webp 480w, img/opt/kuchyne-krby/img-1081-720.webp 720w, img/opt/kuchyne-krby/img-1081-960.webp 960w, img/opt/kuchyne-krby/img-1081-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Krb s obkladem z přírodního kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="kuchyne-krby" data-full="img/opt/kuchyne-krby/krb6-1600.webp" data-caption="Rohový krb s kamenným obkladem a římsou" aria-label="Zvětšit fotografii: Rohový krb s kamenným obkladem a římsou">
+          <span class="media">
+            <img src="img/opt/kuchyne-krby/krb6-480.webp"
+                 srcset="img/opt/kuchyne-krby/krb6-480.webp 480w, img/opt/kuchyne-krby/krb6-720.webp 720w, img/opt/kuchyne-krby/krb6-960.webp 960w, img/opt/kuchyne-krby/krb6-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Rohový krb s kamenným obkladem a římsou"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+
+        <!-- 4. Bytové doplňky (2) -->
+        <button class="gallery-item" type="button" data-cat="doplnky" data-full="img/opt/doplnky/img-1073-1600.webp" data-caption="Sloupkové stolní hodiny z přírodního kamene" aria-label="Zvětšit fotografii: Sloupkové stolní hodiny z přírodního kamene">
+          <span class="media">
+            <img src="img/opt/doplnky/img-1073-480.webp"
+                 srcset="img/opt/doplnky/img-1073-480.webp 480w, img/opt/doplnky/img-1073-720.webp 720w, img/opt/doplnky/img-1073-960.webp 960w, img/opt/doplnky/img-1073-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Sloupkové stolní hodiny z přírodního kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="doplnky" data-full="img/opt/doplnky/img-1075-1600.webp" data-caption="Kamenná stolní souprava a dekorace z mramoru" aria-label="Zvětšit fotografii: Kamenná stolní souprava a dekorace z mramoru">
+          <span class="media">
+            <img src="img/opt/doplnky/img-1075-480.webp"
+                 srcset="img/opt/doplnky/img-1075-480.webp 480w, img/opt/doplnky/img-1075-720.webp 720w, img/opt/doplnky/img-1075-960.webp 960w, img/opt/doplnky/img-1075-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenná stolní souprava a dekorace z mramoru"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+
+        <!-- 5. Ostatní (4) -->
+        <button class="gallery-item" type="button" data-cat="ostatni" data-full="img/opt/ostatni/img-1089-1600.webp" data-caption="Kamenný parapet a architektonický prvek" aria-label="Zvětšit fotografii: Kamenný parapet a architektonický prvek">
+          <span class="media">
+            <img src="img/opt/ostatni/img-1089-480.webp"
+                 srcset="img/opt/ostatni/img-1089-480.webp 480w, img/opt/ostatni/img-1089-720.webp 720w, img/opt/ostatni/img-1089-960.webp 960w, img/opt/ostatni/img-1089-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenný parapet a architektonický prvek"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="ostatni" data-full="img/opt/ostatni/img-1240-1600.webp" data-caption="Masivní kamenný prvek na míru" aria-label="Zvětšit fotografii: Masivní kamenný prvek na míru">
+          <span class="media">
+            <img src="img/opt/ostatni/img-1240-480.webp"
+                 srcset="img/opt/ostatni/img-1240-480.webp 480w, img/opt/ostatni/img-1240-720.webp 720w, img/opt/ostatni/img-1240-960.webp 960w, img/opt/ostatni/img-1240-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Masivní kamenný prvek na míru"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="ostatni" data-full="img/opt/ostatni/img-1243-1600.webp" data-caption="Zakázková výroba z přírodního kamene" aria-label="Zvětšit fotografii: Zakázková výroba z přírodního kamene">
+          <span class="media">
+            <img src="img/opt/ostatni/img-1243-480.webp"
+                 srcset="img/opt/ostatni/img-1243-480.webp 480w, img/opt/ostatni/img-1243-720.webp 720w, img/opt/ostatni/img-1243-960.webp 960w, img/opt/ostatni/img-1243-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Zakázková výroba z přírodního kamene"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+        <button class="gallery-item" type="button" data-cat="ostatni" data-full="img/opt/ostatni/img-1279-1600.webp" data-caption="Kamenný stůl a lavice z přírodní žuly" aria-label="Zvětšit fotografii: Kamenný stůl a lavice z přírodní žuly">
+          <span class="media">
+            <img src="img/opt/ostatni/img-1279-480.webp"
+                 srcset="img/opt/ostatni/img-1279-480.webp 480w, img/opt/ostatni/img-1279-720.webp 720w, img/opt/ostatni/img-1279-960.webp 960w, img/opt/ostatni/img-1279-1600.webp 1600w"
+                 sizes="(min-width: 960px) 400px, (min-width: 640px) 50vw, 100vw"
+                 width="1600" height="1200"
+                 alt="Kamenný stůl a lavice z přírodní žuly"
+                 loading="lazy" decoding="async">
+          </span>
+        </button>
+      </div>
     </div>
-  </section>
 
-  <!-- Galerie -->
-  <section class="gallery">
-    <div class="container">
-
-      <div class="gallery__section" id="pomniky">
-        <h2>Náhrobky a pomníky</h2>
-        <div class="gallery__grid">
-          <div class="gallery__item"><img src="img/pomniky/IMG_1033.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1060.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1064.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1034.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1045.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1042.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1054.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1026.JPEG" alt="Pomník" loading="lazy"></div>
-        </div>
-        <div class="gallery__grid gallery__grid--hidden" id="pomnikyMore">
-          <div class="gallery__item"><img src="img/pomniky/IMG_1027.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1047.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1050.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1035.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1043.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1044.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1048.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1049.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1051.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1052.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1053.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1056.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1061.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1277.JPEG" alt="Pomník" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/pomniky/IMG_1282.JPEG" alt="Pomník" loading="lazy"></div>
-        </div>
-        <div class="text-center" style="margin-top: 24px;">
-          <button class="btn btn--outline gallery__more-btn" data-target="pomnikyMore">Zobrazit více</button>
-        </div>
-      </div>
-
-      <div class="gallery__section" id="schody">
-        <h2>Schody a dlažby</h2>
-        <div class="gallery__grid">
-          <div class="gallery__item"><img src="img/schody/IMG_1086.JPEG" alt="Schody" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/schody/IMG_5986.JPEG" alt="Dlažba" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/schody/schody_3.JPEG" alt="Schody" loading="lazy"></div>
-        </div>
-      </div>
-
-      <div class="gallery__section" id="kuchyne-krby">
-        <h2>Kuchyně a krby</h2>
-        <div class="gallery__grid">
-          <div class="gallery__item"><img src="img/kuchyne-krby/IMG_1068.JPEG" alt="Kuchyně" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/kuchyne-krby/IMG_1071.JPEG" alt="Kuchyně" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/kuchyne-krby/IMG_1081.JPEG" alt="Krb" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/kuchyne-krby/KRB6.jpg" alt="Krb" loading="lazy"></div>
-        </div>
-      </div>
-
-      <div class="gallery__section" id="doplnky">
-        <h2>Bytové doplňky</h2>
-        <div class="gallery__grid">
-          <div class="gallery__item"><img src="img/doplnky/IMG_1073.JPEG" alt="Bytový doplněk" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/doplnky/IMG_1075.JPEG" alt="Bytový doplněk" loading="lazy"></div>
-        </div>
-      </div>
-
-      <div class="gallery__section" id="ostatni">
-        <h2>Ostatní</h2>
-        <div class="gallery__grid">
-          <div class="gallery__item"><img src="img/ostatni/IMG_1089.JPEG" alt="Ostatní" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/ostatni/IMG_1240.JPEG" alt="Ostatní" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/ostatni/IMG_1243.JPEG" alt="Ostatní" loading="lazy"></div>
-          <div class="gallery__item"><img src="img/ostatni/IMG_1279.JPEG" alt="Ostatní" loading="lazy"></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Patička -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__col">
-        <a href="index.html" class="logo logo--footer">
-          <img src="img/adamek-logo-dark.svg" class="logo__img" alt="Kamenictví Adámek">
-        </a>
-        <p class="footer__desc">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb. Kvalita, spolehlivost a férovost.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Navigace</h4>
-        <a href="index.html">Úvod</a>
-        <a href="reference.html">Reference</a>
-        <a href="cenik.html">Ceník</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="footer__col">
-        <h4>Kontakt</h4>
-        <p>Sokolská 595<br>790 84 Mikulovice</p>
-        <p><a href="tel:+420602277869">602 277 869</a></p>
-        <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
-      </div>
-    </div>
-    <div class="footer__bottom">
+    <!-- Kontaktní panel -->
+    <section class="section" style="padding-top: var(--section);">
       <div class="container">
-        <p>&copy; 2026 Kamenictví Adámek. Všechna práva vyhrazena. <span class="footer__credit">Webdesign Filip Adámek</span></p>
+        <div class="contact-panel">
+          <div class="contact-panel__inner">
+            <div class="contact-panel__content">
+              <h2>Máte zájem o naše služby?</h2>
+              <p>Rádi vám poradíme s výběrem materiálu a zpracujeme nezávaznou cenovou nabídku.</p>
+              <div class="contact-panel__actions">
+                <a href="tel:+420602277869" class="btn btn--primary">
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+                  <span>Zavolat 602 277 869</span>
+                </a>
+                <a href="mailto:info@kamenictvi-adamek.cz" class="btn btn--secondary">
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+                  <span>Napsat e-mail</span>
+                </a>
+              </div>
+            </div>
+            <dl class="contact-panel__dl">
+              <div class="contact-panel__row">
+                <dt>Adresa</dt>
+                <dd>Sokolská 595, 790 84 Mikulovice</dd>
+              </div>
+              <div class="contact-panel__row">
+                <dt>E-mail</dt>
+                <dd><a href="mailto:info@kamenictvi-adamek.cz" style="text-decoration:none;">info@kamenictvi-adamek.cz</a></dd>
+              </div>
+              <div class="contact-panel__row">
+                <dt>Provozní doba</dt>
+                <dd>Po-Ne 8:00-20:00</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo" aria-label="Kamenictví Adámek, úvod">
+            <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
+          </a>
+          <p class="footer__about">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb.</p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Stránky</h2>
+          <nav class="footer__nav" aria-label="Patičková navigace">
+            <a href="index.html">Úvod</a>
+            <a href="reference.html">Reference</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Kontakt</h2>
+          <div class="footer__info">
+            <p>Sokolská 595<br>790 84 Mikulovice</p>
+            <p><a href="tel:+420602277869">602 277 869</a></p>
+            <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Provozní doba</h2>
+          <div class="footer__info">
+            <p>Po-Ne 8:00-20:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Kamenictví Adámek</p>
+        <p>Webdesign Filip Adámek</p>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox__close" id="lightbox-close">&times;</button>
-    <img src="" alt="" id="lightbox-img">
-  </div>
+  <!-- Lightbox dialog -->
+  <dialog class="lightbox" id="lightbox" aria-label="Detail fotografie">
+    <div class="lightbox__container">
+      <button type="button" class="lightbox__btn lightbox__close" id="lightboxClose" aria-label="Zavřít">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+      </button>
+      <div class="lightbox__content">
+        <img alt="" id="lightboxImg" class="lightbox__img">
+        <div class="lightbox__meta">
+          <p class="lightbox__caption" id="lightboxCaption"></p>
+          <span class="lightbox__counter" id="lightboxCounter"></span>
+        </div>
+      </div>
+      <button type="button" class="lightbox__btn lightbox__prev" id="lightboxPrev" aria-label="Předchozí fotografie">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
+      </button>
+      <button type="button" class="lightbox__btn lightbox__next" id="lightboxNext" aria-label="Další fotografie">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+      </button>
+    </div>
+  </dialog>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <!-- Vercel Analytics -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>

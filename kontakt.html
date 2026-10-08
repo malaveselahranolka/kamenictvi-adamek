@@ -7,150 +7,196 @@
   <meta name="description" content="Kontaktujte Kamenictví Adámek — Sokolská 595, 790 84 Mikulovice. Telefon: 602 277 869. Rodinná firma s 30+ let tradicí, působíme na Jesenicku a severní Moravě.">
   <meta name="keywords" content="kontakt kamenictví, kamenictví Mikulovice, kamenictví Jeseník, Sokolská 595 Mikulovice, telefon kamenictví">
   <link rel="canonical" href="https://kamenictvi-adamek.cz/kontakt.html">
+  <meta name="theme-color" content="#f6f6f3">
+
+  <!-- Preload písma -->
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Favicon -->
   <link rel="icon" href="img/adamek-favicon-light.svg" type="image/svg+xml">
   <link rel="icon" href="img/adamek-favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Kontakt — Kamenictví Adámek">
   <meta property="og:description" content="Sokolská 595, Mikulovice. Telefon: 602 277 869. Rodinná firma s 30+ let tradicí.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kamenictvi-adamek.cz/kontakt.html">
   <meta property="og:image" content="https://kamenictvi-adamek.cz/img/pomniky/IMG_1034.JPEG">
   <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Kamenictví Adámek">
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigace -->
-  <header class="header header--scrolled" id="header">
+  <div id="top-sentinel" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;"></div>
+  <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
+
+  <!-- Header -->
+  <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">
-        <img src="img/adamek-logo-light.svg" class="logo__img" alt="Kamenictví Adámek">
+      <a href="index.html" class="header__logo" aria-label="Kamenictví Adámek, úvod">
+        <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
       </a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link">Úvod</a>
-        <a href="reference.html" class="nav__link">Reference</a>
-        <a href="cenik.html" class="nav__link">Ceník</a>
-        <a href="kontakt.html" class="nav__link nav__link--active">Kontakt</a>
+      <nav class="header__nav" aria-label="Hlavní navigace">
+        <a href="reference.html" class="header__nav-link">Reference</a>
+        <a href="cenik.html" class="header__nav-link">Ceník</a>
+        <a href="kontakt.html" class="header__nav-link" aria-current="page">Kontakt</a>
+        <a href="tel:+420602277869" class="btn btn--primary btn--sm">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+          <span>602 277 869</span>
+        </a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__actions-mobile">
+        <a href="tel:+420602277869" class="btn btn--icon header__phone-mobile" aria-label="Zavolat 602 277 869">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        </a>
+        <button type="button" class="btn btn--icon header__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <svg class="icon-menu" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>
+          <svg class="icon-close" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="mobile-menu__nav" aria-label="Mobilní navigace">
+        <a href="index.html" class="mobile-menu__link">Úvod</a>
+        <a href="reference.html" class="mobile-menu__link">Reference</a>
+        <a href="cenik.html" class="mobile-menu__link">Ceník</a>
+        <a href="kontakt.html" class="mobile-menu__link" aria-current="page">Kontakt</a>
+      </nav>
+      <a href="tel:+420602277869" class="btn btn--primary">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        <span>Zavolat 602 277 869</span>
+      </a>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hlavní obsah -->
+  <main id="obsah">
     <div class="container">
-      <span class="section-label">Spojte se s námi</span>
-      <h1>Kontakt</h1>
-      <p>Rádi vám poradíme s výběrem materiálu a zpracujeme nezávaznou nabídku.</p>
-    </div>
-  </section>
+      <!-- Hlavička stránky -->
+      <section class="page-header">
+        <h1>Kontakt</h1>
+        <p class="lead">Rádi vám poradíme s výběrem materiálu a zpracujeme nezávaznou nabídku.</p>
+      </section>
 
-  <!-- Kontakt -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact__grid">
-        <div class="contact__info">
-          <h2>Kontaktní údaje</h2>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
+      <!-- Kontaktní mřížka -->
+      <div class="contact-grid">
+        <!-- Vlevo: Kontaktní údaje -->
+        <div class="contact-info">
+          <div class="contact-list">
+            <div class="contact-row">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 256 256" fill="currentColor" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+              </div>
+              <dl>
+                <dt>Telefon</dt>
+                <dd><a href="tel:+420602277869">602 277 869</a></dd>
+              </dl>
             </div>
-            <div class="contact-item__text">
-              <h4>Adresa</h4>
-              <p>Sokolská 595<br>790 84 Mikulovice</p>
+
+            <div class="contact-row">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 256 256" fill="currentColor" focusable="false"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+              </div>
+              <dl>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></dd>
+              </dl>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 256 256" fill="currentColor" focusable="false"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>
+              </div>
+              <dl>
+                <dt>Adresa</dt>
+                <dd>Sokolská 595, 790 84 Mikulovice</dd>
+              </dl>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 256 256" fill="currentColor" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>
+              </div>
+              <dl>
+                <dt>Provozní doba</dt>
+                <dd>Každý den 8:00 až 20:00</dd>
+              </dl>
             </div>
           </div>
 
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-            </div>
-            <div class="contact-item__text">
-              <h4>Telefon</h4>
-              <p>
-                <a href="tel:+420602277869">602 277 869</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div class="contact-item__text">
-              <h4>E-mail</h4>
-              <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div class="contact-item__text">
-              <h4>Provozní doba</h4>
-              <p>Po - Ne: 8:00 - 20:00</p>
-            </div>
-          </div>
+          <a href="tel:+420602277869" class="btn btn--primary">
+            <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+            <span>Zavolat 602 277 869</span>
+          </a>
         </div>
 
-        <div class="contact__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.5!2d17.3331!3d50.2928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712b1a0a0a0a0a0%3A0x0!2sSokolsk%C3%A1+595%2C+Mikulovice!5e0!3m2!1scs!2scz!4v1"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <!-- Vpravo: Mapová fasáda -->
+        <div>
+          <div class="map-facade" id="mapFacade">
+            <div class="map-facade__placeholder">
+              <svg class="map-facade__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>
+              <p class="map-facade__address">Sokolská 595, 790 84 Mikulovice</p>
+              <button type="button" class="btn btn--secondary" id="loadMapBtn">Zobrazit mapu</button>
+              <div class="map-facade__links">
+                <a href="https://mapy.cz/zakladni?q=Sokolsk%C3%A1%20595%2C%20Mikulovice" target="_blank" rel="noopener noreferrer" class="link">
+                  <span>Mapy.cz</span>
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sokolsk%C3%A1+595+Mikulovice" target="_blank" rel="noopener noreferrer" class="link">
+                  <span>Google Maps</span>
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Patička -->
+  <!-- Footer (bez kontaktního panelu) -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__col">
-        <a href="index.html" class="logo logo--footer">
-          <img src="img/adamek-logo-dark.svg" class="logo__img" alt="Kamenictví Adámek">
-        </a>
-        <p class="footer__desc">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb. Kvalita, spolehlivost a férovost.</p>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo" aria-label="Kamenictví Adámek, úvod">
+            <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
+          </a>
+          <p class="footer__about">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb.</p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Stránky</h2>
+          <nav class="footer__nav" aria-label="Patičková navigace">
+            <a href="index.html">Úvod</a>
+            <a href="reference.html">Reference</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Kontakt</h2>
+          <div class="footer__info">
+            <p>Sokolská 595<br>790 84 Mikulovice</p>
+            <p><a href="tel:+420602277869">602 277 869</a></p>
+            <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Provozní doba</h2>
+          <div class="footer__info">
+            <p>Po-Ne 8:00-20:00</p>
+          </div>
+        </div>
       </div>
-      <div class="footer__col">
-        <h4>Navigace</h4>
-        <a href="index.html">Úvod</a>
-        <a href="reference.html">Reference</a>
-        <a href="cenik.html">Ceník</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="footer__col">
-        <h4>Kontakt</h4>
-        <p>Sokolská 595<br>790 84 Mikulovice</p>
-        <p><a href="tel:+420602277869">602 277 869</a></p>
-        <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2026 Kamenictví Adámek. Všechna práva vyhrazena. <span class="footer__credit">Webdesign Filip Adámek</span></p>
+      <div class="footer__bottom">
+        <p>© 2026 Kamenictví Adámek</p>
+        <p>Webdesign Filip Adámek</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <!-- Vercel Analytics -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>

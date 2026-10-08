@@ -4,186 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ceník — Kamenictví Adámek | Kamenictví Jeseník, Mikulovice</title>
-  <meta name="description" content="Ceník kamenických služeb — Kamenictví Adámek, Mikulovice. Orientační ceny pomníků, kuchyňských desek, krbů, schodů a dlažeb. 30+ let tradice.">
+  <meta name="description" content="Ceník kamenických služeb — Kamenictví Adámek, Mikulovice. Pomníky, kuchyňské desky, krby, schody a dlažby — cena dle rozsahu, zaměření zdarma.">
   <meta name="keywords" content="ceník kamenictví, cena pomníku, cena náhrobku, ceník kamenických prací, kamenictví Jeseník, kamenictví Mikulovice">
   <link rel="canonical" href="https://kamenictvi-adamek.cz/cenik.html">
+  <meta name="theme-color" content="#f6f6f3">
+
+  <!-- Preload písma -->
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Favicon -->
   <link rel="icon" href="img/adamek-favicon-light.svg" type="image/svg+xml">
   <link rel="icon" href="img/adamek-favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Ceník — Kamenictví Adámek">
-  <meta property="og:description" content="Orientační ceník kamenických služeb. Rodinná firma s 30+ let tradicí.">
+  <meta property="og:description" content="Ceník kamenických služeb — cena dle rozsahu, zaměření a konzultace zdarma.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kamenictvi-adamek.cz/cenik.html">
   <meta property="og:image" content="https://kamenictvi-adamek.cz/img/pomniky/IMG_1034.JPEG">
   <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Kamenictví Adámek">
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigace -->
-  <header class="header header--scrolled" id="header">
+  <div id="top-sentinel" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;"></div>
+  <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
+
+  <!-- Header -->
+  <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">
-        <img src="img/adamek-logo-light.svg" class="logo__img" alt="Kamenictví Adámek">
+      <a href="index.html" class="header__logo" aria-label="Kamenictví Adámek, úvod">
+        <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
       </a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link">Úvod</a>
-        <a href="reference.html" class="nav__link">Reference</a>
-        <a href="cenik.html" class="nav__link nav__link--active">Ceník</a>
-        <a href="kontakt.html" class="nav__link">Kontakt</a>
+      <nav class="header__nav" aria-label="Hlavní navigace">
+        <a href="reference.html" class="header__nav-link">Reference</a>
+        <a href="cenik.html" class="header__nav-link" aria-current="page">Ceník</a>
+        <a href="kontakt.html" class="header__nav-link">Kontakt</a>
+        <a href="tel:+420602277869" class="btn btn--primary btn--sm">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+          <span>602 277 869</span>
+        </a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__actions-mobile">
+        <a href="tel:+420602277869" class="btn btn--icon header__phone-mobile" aria-label="Zavolat 602 277 869">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        </a>
+        <button type="button" class="btn btn--icon header__menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <svg class="icon-menu" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>
+          <svg class="icon-close" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="mobile-menu__nav" aria-label="Mobilní navigace">
+        <a href="index.html" class="mobile-menu__link">Úvod</a>
+        <a href="reference.html" class="mobile-menu__link">Reference</a>
+        <a href="cenik.html" class="mobile-menu__link" aria-current="page">Ceník</a>
+        <a href="kontakt.html" class="mobile-menu__link">Kontakt</a>
+      </nav>
+      <a href="tel:+420602277869" class="btn btn--primary">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+        <span>Zavolat 602 277 869</span>
+      </a>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hlavní obsah -->
+  <main id="obsah">
     <div class="container">
-      <span class="section-label">Ceny</span>
-      <h1>Ceník služeb</h1>
-      <p>Orientační ceník našich nejčastějších služeb. Přesnou cenu vždy stanovíme individuálně.</p>
-    </div>
-  </section>
+      <!-- Hlavička stránky -->
+      <section class="page-header">
+        <h1>Ceník</h1>
+        <p class="lead">Každá zakázka je jiná. Cenu stanovíme podle rozsahu, materiálu a náročnosti, zaměření a konzultace jsou zdarma.</p>
+      </section>
 
-  <!-- Ceník -->
-  <section class="pricing">
-    <div class="container">
+      <!-- Panely ceníku -->
+      <div class="price-grid">
+        <!-- 1. Výroba -->
+        <section class="price-panel price-panel--full">
+          <h2>Výroba</h2>
+          <ul class="price-list" role="list">
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Urnový pomník</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Včetně nápisu, bez montáže</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Pomník na dvojhrob</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Včetně nápisu, bez montáže</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Kuchyňská deska</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na materiálu a rozměrech</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Koupelnová deska</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na materiálu a rozměrech</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Obklad krbu</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na rozměrech a materiálu</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Obklad schodů</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na počtu stupňů a materiálu</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Dlažba z přírodního kamene</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na materiálu a ploše</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Parapety</span>
+                <span class="price-chip">Dle rozsahu</span>
+              </div>
+              <p class="price-item__note">Závisí na šířce a materiálu</p>
+            </li>
+          </ul>
+        </section>
 
-      <div class="pricing__note">
-        <p>Ceny jsou orientační a závisí na zvoleném materiálu, rozměrech a náročnosti zpracování. Pro přesnou cenovou nabídku nás prosím <a href="kontakt.html">kontaktujte</a> — kalkulace je zdarma a nezávazná.</p>
-      </div>
+        <!-- 2. Služby -->
+        <section class="price-panel">
+          <h2>Služby</h2>
+          <ul class="price-list" role="list">
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Zaměření a konzultace</span>
+                <span class="price-chip price-chip--free">Zdarma</span>
+              </div>
+              <p class="price-item__note">V rámci objednávky</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Doprava a montáž</span>
+                <span class="price-chip">Po domluvě</span>
+              </div>
+              <p class="price-item__note">Individuální kalkulace</p>
+            </li>
+          </ul>
+        </section>
 
-      <table class="pricing__table">
-        <thead>
-          <tr>
-            <th>Služba</th>
-            <th>Orientační cena</th>
-            <th>Poznámka</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pomník — urnový</td>
-            <td>od 25 000 Kč</td>
-            <td>Včetně nápisu, bez montáže</td>
-          </tr>
-          <tr>
-            <td>Pomník — dvojhrob</td>
-            <td>od 55 000 Kč</td>
-            <td>Včetně nápisu, bez montáže</td>
-          </tr>
-          <tr>
-            <td>Kuchyňská deska</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na materiálu a rozměrech</td>
-          </tr>
-          <tr>
-            <td>Koupelnová deska</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na materiálu a rozměrech</td>
-          </tr>
-          <tr>
-            <td>Obklad krbu</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na rozměrech a materiálu</td>
-          </tr>
-          <tr>
-            <td>Schody — obklad</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na počtu stupňů a materiálu</td>
-          </tr>
-          <tr>
-            <td>Dlažba z přírodního kamene</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na materiálu a ploše</td>
-          </tr>
-          <tr>
-            <td>Parapety</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na šířce a materiálu</td>
-          </tr>
-          <tr>
-            <td>Zaměření a konzultace</td>
-            <td>Zdarma</td>
-            <td>V rámci objednávky</td>
-          </tr>
-          <tr>
-            <td>Doprava a montáž</td>
-            <td>Dle konzultace</td>
-            <td>Individuální kalkulace</td>
-          </tr>
-          <tr class="pricing__section-header">
-            <td colspan="3">Přezlacení a renovace</td>
-          </tr>
-          <tr>
-            <td>Přezlacení nápisu</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na délce a typu písma</td>
-          </tr>
-          <tr>
-            <td>Čištění a renovace pomníku</td>
-            <td>Dle konzultace</td>
-            <td>Odstranění nečistot, obnova lesku</td>
-          </tr>
-          <tr>
-            <td>Oprava poškozených částí</td>
-            <td>Dle konzultace</td>
-            <td>Závisí na rozsahu poškození</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container text-center">
-      <h2 class="cta__title">Chcete přesnou cenovou nabídku?</h2>
-      <p class="cta__text">Zavolejte nám nebo napište — kalkulaci připravíme zdarma a nezávazně.</p>
-      <div class="hero__buttons">
-        <a href="tel:+420602277869" class="btn btn--primary">Zavolejte nám</a>
-        <a href="kontakt.html" class="btn btn--outline">Napište nám</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Patička -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__col">
-        <a href="index.html" class="logo logo--footer">
-          <img src="img/adamek-logo-dark.svg" class="logo__img" alt="Kamenictví Adámek">
-        </a>
-        <p class="footer__desc">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb. Kvalita, spolehlivost a férovost.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Navigace</h4>
-        <a href="index.html">Úvod</a>
-        <a href="reference.html">Reference</a>
-        <a href="cenik.html">Ceník</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="footer__col">
-        <h4>Kontakt</h4>
-        <p>Sokolská 595<br>790 84 Mikulovice</p>
-        <p><a href="tel:+420602277869">602 277 869</a></p>
-        <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
+        <!-- 3. Přezlacení a renovace -->
+        <section class="price-panel">
+          <h2>Přezlacení a renovace</h2>
+          <ul class="price-list" role="list">
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Přezlacení nápisu</span>
+                <span class="price-chip">Po domluvě</span>
+              </div>
+              <p class="price-item__note">Závisí na délce a typu písma</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Čištění a renovace pomníku</span>
+                <span class="price-chip">Po domluvě</span>
+              </div>
+              <p class="price-item__note">Odstranění nečistot, obnova lesku</p>
+            </li>
+            <li class="price-item">
+              <div class="price-item__top">
+                <span class="price-item__name">Oprava poškozených částí</span>
+                <span class="price-chip">Po domluvě</span>
+              </div>
+              <p class="price-item__note">Závisí na rozsahu poškození</p>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
-    <div class="footer__bottom">
+
+    <!-- Kontaktní panel -->
+    <section class="section" style="padding-top: var(--section);">
       <div class="container">
-        <p>&copy; 2026 Kamenictví Adámek. Všechna práva vyhrazena. <span class="footer__credit">Webdesign Filip Adámek</span></p>
+        <div class="contact-panel">
+          <div class="contact-panel__inner">
+            <div class="contact-panel__content">
+              <h2>Máte zájem o naše služby?</h2>
+              <p>Rádi vám poradíme s výběrem materiálu a zpracujeme nezávaznou cenovou nabídku.</p>
+              <div class="contact-panel__actions">
+                <a href="tel:+420602277869" class="btn btn--primary">
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+                  <span>Zavolat 602 277 869</span>
+                </a>
+                <a href="mailto:info@kamenictvi-adamek.cz" class="btn btn--secondary">
+                  <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+                  <span>Napsat e-mail</span>
+                </a>
+              </div>
+            </div>
+            <dl class="contact-panel__dl">
+              <div class="contact-panel__row">
+                <dt>Adresa</dt>
+                <dd>Sokolská 595, 790 84 Mikulovice</dd>
+              </div>
+              <div class="contact-panel__row">
+                <dt>E-mail</dt>
+                <dd><a href="mailto:info@kamenictvi-adamek.cz" style="text-decoration:none;">info@kamenictvi-adamek.cz</a></dd>
+              </div>
+              <div class="contact-panel__row">
+                <dt>Provozní doba</dt>
+                <dd>Po-Ne 8:00-20:00</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo" aria-label="Kamenictví Adámek, úvod">
+            <img src="img/adamek-logo-light-crop.svg" alt="Kamenictví Adámek" width="536" height="245">
+          </a>
+          <p class="footer__about">Rodinná firma s více než 30letou tradicí v oboru kamenických služeb.</p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Stránky</h2>
+          <nav class="footer__nav" aria-label="Patičková navigace">
+            <a href="index.html">Úvod</a>
+            <a href="reference.html">Reference</a>
+            <a href="cenik.html">Ceník</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Kontakt</h2>
+          <div class="footer__info">
+            <p>Sokolská 595<br>790 84 Mikulovice</p>
+            <p><a href="tel:+420602277869">602 277 869</a></p>
+            <p><a href="mailto:info@kamenictvi-adamek.cz">info@kamenictvi-adamek.cz</a></p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__col-title">Provozní doba</h2>
+          <div class="footer__info">
+            <p>Po-Ne 8:00-20:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Kamenictví Adámek</p>
+        <p>Webdesign Filip Adámek</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <!-- Vercel Analytics -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
