@@ -564,11 +564,11 @@ const ACCESSORIES = [
   { id: "lantern", name: "Lampa", desc: "\u017Dulov\xE1 nebo plechov\xE1 lampa na sv\xED\u010Dku.", price: 2800 }
 ];
 const STEPS = [
-  { id: "type", short: "Velikost", kicker: "Velikost m\xEDsta", title: "Jak\xE9 m\xEDsto navrhujeme?", lead: "Sta\u010D\xED zvolit urnov\xFD, jednohrob nebo dvojhrob. Rozm\u011Br m\u016F\u017Eeme p\u0159i zam\u011B\u0159en\xED upravit." },
-  { id: "style", short: "Tvar", kicker: "Tvar a konstrukce", title: "Vyberte podobu pomn\xEDku", lead: "Vyberte tvar n\xE1pisov\xE9 desky a konstruk\u010Dn\xED detaily \u2014 kryc\xED desku, podstavec, ok\xFDnko a styl okraje." },
-  { id: "material", short: "Materi\xE1l", kicker: "Materi\xE1ly", title: "Sla\u010Fte barvy kamene", lead: "Bu\u010F jednu \u017Eulu na cel\xFD pomn\xEDk, nebo si vyberte materi\xE1l pro ka\u017Edou \u010D\xE1st zvl\xE1\u0161\u0165." },
-  { id: "text", short: "N\xE1pis", kicker: "N\xE1pis a p\xEDsmo", title: "Vzpom\xEDnka vlastn\xEDmi slovy", lead: "P\xEDsmo, barva, jm\xE9na, data a p\u0159\xEDpadn\u011B fotokeramika na jedn\xE9 obrazovce." },
-  { id: "extras", short: "Dopl\u0148ky", kicker: "Dopl\u0148ky", title: "Dola\u010Fte posledn\xED detaily", lead: "Zvolte lampu s v\xE1zou jako komplet a p\u0159\xEDpadn\u011B dopl\u0148te k\u0159\xED\u017E nebo b\xEDlou r\u016F\u017Ei na n\xE1pisovou desku." },
-  { id: "summary", short: "Souhrn", kicker: "Hotovo", title: "V\xE1\u0161 n\xE1vrh je p\u0159ipraven\xFD", lead: "Projd\u011Bte si v\xFDb\u011Br a po\u0161lete n\xE1m nez\xE1vaznou popt\xE1vku." }
+  { id: "type", short: "Místo", kicker: "Místo", title: "Vzpomínka v kameni.", lead: "Začněme místem, které máte k dispozici. Rozměry společně doladíme při zaměření." },
+  { id: "style", short: "Podoba", kicker: "Podoba", title: "Tvar, který vám bude blízký.", lead: "Prohlédněte si tvary desky. Podstavec, zakrytí i ostatní konstrukční detaily si upravíte níže." },
+  { id: "material", short: "Kámen", kicker: "Kámen", title: "Vyberte si svůj kámen.", lead: "Přirozená kresba, světlý nebo tmavý odstín. Použijte jeden kámen, nebo slaďte jednotlivé části." },
+  { id: "text", short: "Nápis", kicker: "Nápis", title: "Slova, která zůstanou.", lead: "Doplňte jména a data. Pak vyberte písmo, barvu a případně fotografii." },
+  { id: "extras", short: "Detaily", kicker: "Detaily", title: "Malé detaily. Osobní vzpomínka.", lead: "Váza, světlo svíčky, růže nebo kříž. Vyberte prvky, které jsou vám blízké." },
+  { id: "summary", short: "Váš návrh", kicker: "Váš návrh", title: "Vaše představa má podobu.", lead: "Projděte si celý návrh. S provedením a přesnou cenou vám pomůžeme osobně." }
 ];
 Object.assign(window, { TYPES, MATERIALS, COMPONENTS, STYLES, SHAPES, FONTS, TEXT_COLORS, ACCESSORIES, STEPS, getHeadstoneDesign, getImportedHeadstoneDesign });
