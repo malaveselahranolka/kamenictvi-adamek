@@ -2692,3 +2692,48 @@ main.theme-light {
   font-weight: 600;
   letter-spacing: 0;
 }
+
+/* Mobil: text nahoře, pod ním jedna ostrá fotka na výšku (bez ztmavení a pohybu) */
+@media (max-width: 639px) {
+  .hero {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .hero__inner {
+    display: contents;
+  }
+  .hero__content {
+    order: 1;
+    padding: calc(64px + 36px) var(--gutter) 28px;
+  }
+  .hero__bg {
+    position: relative;
+    order: 2;
+    inset: auto;
+    z-index: 0;
+    aspect-ratio: 4 / 5;
+    margin-inline: var(--gutter);
+    border-radius: var(--radius-img);
+  }
+  .hero__shade,
+  .hero__slide:not(:first-child),
+  .hero__dots {
+    display: none;
+  }
+  .hero__slide img,
+  .hero__slide.is-active img,
+  .hero__slides {
+    animation: none !important;
+    transform: none !important;
+  }
+  .hero__slide img {
+    object-position: 50% 100%;
+  }
+  .hero__foot {
+    order: 3;
+    padding: 4px var(--gutter) 40px;
+  }
+  .hero__lead {
+    margin-bottom: 28px;
+  }
+}

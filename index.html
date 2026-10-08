@@ -12,7 +12,8 @@
   <!-- Preload písma a Hero obrázku -->
   <link rel="preload" href="fonts/libre-caslon-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/albert-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" imagesrcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" imagesizes="100vw">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" imagesizes="100vw" media="(min-width: 640px)">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="img/opt/pomniky/img-1052-mobil-768.webp 768w, img/opt/pomniky/img-1052-mobil-1152.webp 1152w" imagesizes="100vw" media="(max-width: 639px)">
 
   <!-- Favicon -->
   <link rel="icon" href="img/adamek-favicon-light.svg" type="image/svg+xml">
@@ -125,7 +126,10 @@
       <div class="hero__bg">
         <div class="hero__slides">
               <figure class="hero__slide is-active">
-                <img src="img/opt/pomniky/img-1052-1600.webp" srcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Dvoudílný žulový pomník s lucernou a vázou" loading="eager" fetchpriority="high" decoding="async">
+                <picture>
+                  <source media="(max-width: 639px)" srcset="img/opt/pomniky/img-1052-mobil-768.webp 768w, img/opt/pomniky/img-1052-mobil-1152.webp 1152w" sizes="100vw" width="1152" height="1536">
+                  <img src="img/opt/pomniky/img-1052-1600.webp" srcset="img/opt/pomniky/img-1052-480.webp 480w, img/opt/pomniky/img-1052-720.webp 720w, img/opt/pomniky/img-1052-960.webp 960w, img/opt/pomniky/img-1052-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Dvoudílný žulový pomník s lucernou a vázou" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
               </figure>
               <figure class="hero__slide">
                 <img src="img/opt/pomniky/img-1034-1600.webp" srcset="img/opt/pomniky/img-1034-480.webp 480w, img/opt/pomniky/img-1034-720.webp 720w, img/opt/pomniky/img-1034-960.webp 960w, img/opt/pomniky/img-1034-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Černý žulový pomník s reliéfem růže" loading="lazy" fetchpriority="low" decoding="async">

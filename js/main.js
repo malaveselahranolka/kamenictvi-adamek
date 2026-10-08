@@ -419,6 +419,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slides.length > 1) {
     const DUR = 6000;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mobile = window.matchMedia('(max-width: 639px)');
+    mobile.addEventListener('change', () => { show(0); schedule(); });
     hero.style.setProperty('--slide-dur', DUR / 1000 + 's');
     let index = 0;
     let timer = 0;
@@ -434,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const schedule = () => {
       clearTimeout(timer);
-      if (reduce || !visible || document.hidden) return;
+      if (reduce || !visible || document.hidden || mobile.matches) return;
       timer = setTimeout(() => {
         show(index + 1);
         schedule();
